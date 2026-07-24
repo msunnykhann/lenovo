@@ -4,15 +4,15 @@ html {
     font-size: 16px;
 }
 
-@media (max-aspect-ratio: 16/9) {
+@media (max-width: 1200px) {
     html {
-        font-size: 0.95vw;
+        font-size: 14px;
     }
 }
 
-@media (min-aspect-ratio: 16/9) {
+@media (min-width: 1800px) {
     html {
-        font-size: 1.6vh;
+        font-size: 18px;
     }
 }
 
@@ -182,8 +182,10 @@ body.presenter-mode #app-layout {
 /* Base Slide Styles */
 .slide {
     position: absolute;
-    width: 68rem;
-    height: 38rem;
+    width: 95%;
+    max-width: 1280px;
+    height: 88%;
+    max-height: 650px;
     opacity: 0;
     pointer-events: none;
     transform: scale(0.97) translateY(5px);
@@ -1434,6 +1436,32 @@ h1, h2, h3, h4 {
 }
 .slide.active .pk-bar-inner-grey {
     height: 55%;
+}
+
+/* Persistent Top Right Brand Logo */
+.top-brand-logo {
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    background-color: var(--brand-red);
+    color: #fff;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.9rem;
+    padding: 5px 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    z-index: 100;
+    transform: skewX(-10deg);
+    box-shadow: 0 4px 10px rgba(226, 26, 34, 0.2);
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    opacity: 0; /* Managed by JS to hide on title cover */
+}
+
+.top-brand-logo span {
+    display: inline-block;
+    transform: skewX(10deg);
 }
 
 /* ----------------------------------------------------

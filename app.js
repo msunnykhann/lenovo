@@ -220,6 +220,16 @@ function goToSlide(index) {
     // Activate new slide
     slides[currentSlide].classList.add('active');
     
+    // Toggle Top Right Brand Logo visibility (hide on cover title slide index 0)
+    const topLogo = document.getElementById('top-brand-logo');
+    if (topLogo) {
+        if (currentSlide === 0) {
+            topLogo.style.opacity = '0';
+        } else {
+            topLogo.style.opacity = '1';
+        }
+    }
+    
     // Update Progress Bar
     const progress = ((currentSlide + 1) / totalSlides) * 100;
     progressBar.style.width = `${progress}%`;

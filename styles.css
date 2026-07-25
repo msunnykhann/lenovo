@@ -153,7 +153,7 @@ body.presenter-mode #app-layout {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
 }
 
 .product-img-frame:hover .product-showcase-img {
@@ -360,14 +360,13 @@ h1, h2, h3, h4 {
     padding: 10px 30px;
     font-size: 2.2rem;
     display: inline-block;
-    transform: skewX(-8deg);
+    border-radius: 4px;
     margin-bottom: 30px;
     box-shadow: 0 10px 30px rgba(226, 26, 34, 0.3);
 }
 
 .lenovo-logo-container span {
     display: inline-block;
-    transform: skewX(8deg);
     letter-spacing: 1px;
 }
 
@@ -557,7 +556,7 @@ h1, h2, h3, h4 {
 .timeline-year-text {
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: 1.1rem;
+    font-size: 1.35rem;
     color: var(--text-secondary);
     margin-bottom: 2px;
     transition: var(--transition-smooth);
@@ -591,6 +590,23 @@ h1, h2, h3, h4 {
 .timeline-nav-horizontal .timeline-btn.active .timeline-chapter-text {
     color: var(--text-primary);
     font-weight: 500;
+}
+
+/* Landmark Milestone Highlight (2005) - Subtle Indicator, NOT looking active */
+.timeline-nav-horizontal .timeline-btn.landmark-milestone:not(.active) .timeline-dot {
+    border-color: rgba(226, 26, 34, 0.45);
+    background: transparent;
+    box-shadow: 0 0 5px rgba(226, 26, 34, 0.2);
+    transform: scale(1.05);
+}
+.timeline-nav-horizontal .timeline-btn.landmark-milestone:not(.active) .timeline-year-text {
+    color: var(--text-secondary);
+    font-weight: 700;
+    text-shadow: none;
+}
+.timeline-nav-horizontal .timeline-btn.landmark-milestone:not(.active) .timeline-chapter-text {
+    color: var(--text-muted);
+    font-weight: 400;
 }
 
 .timeline-detail {
@@ -628,7 +644,7 @@ h1, h2, h3, h4 {
 }
 
 .timeline-year {
-    font-size: 4.5rem;
+    font-size: 5.5rem;
     font-weight: 800;
     color: var(--brand-red);
     line-height: 1;
@@ -678,6 +694,34 @@ h1, h2, h3, h4 {
     font-weight: 700;
     font-size: 1.25rem;
     color: var(--brand-red);
+}
+
+/* Compact Table for Timeline 2005 Milestone */
+.timeline-mini-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.timeline-mini-table th, .timeline-mini-table td {
+    padding: 6px 8px;
+    text-align: left;
+    font-size: 0.82rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.timeline-mini-table th {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: #fff;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.timeline-mini-table td {
+    color: var(--text-secondary);
+}
+
+.timeline-mini-table td strong {
+    color: #fff;
 }
 
 /* Comparison Table */
@@ -808,6 +852,15 @@ h1, h2, h3, h4 {
     border: 1px solid var(--border-color);
     padding: 12px 14px;
     border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.sub-product-card:hover {
+    background: rgba(226, 26, 34, 0.04);
+    border-color: rgba(226, 26, 34, 0.3);
+    box-shadow: 0 4px 15px rgba(226, 26, 34, 0.1);
+    transform: translateY(-2px);
 }
 
 .sub-product-name {
@@ -928,7 +981,6 @@ h1, h2, h3, h4 {
     background: rgba(255, 255, 255, 0.02);
     border-radius: 8px 8px 0 0;
     position: relative;
-    overflow: hidden;
 }
 
 .chart-bar-inner {
@@ -943,21 +995,33 @@ h1, h2, h3, h4 {
     box-shadow: 0 0 15px rgba(226, 26, 34, 0.2);
 }
 
+.chart-bar-inner.prev-year {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.08) 100%) !important;
+    box-shadow: none !important;
+}
+
+.chart-bar-inner.current-peak {
+    background: linear-gradient(180deg, #ff4d52 0%, var(--brand-red) 100%) !important;
+    box-shadow: 0 0 20px rgba(226, 26, 34, 0.5) !important;
+}
+
 .chart-bar-value {
     position: absolute;
-    top: -24px;
+    top: -26px;
+    left: 50%;
+    transform: translateX(-50%) translateY(5px);
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     color: #fff;
     opacity: 0;
-    transform: translateY(5px);
+    white-space: nowrap;
     transition: opacity 0.5s ease 0.8s, transform 0.5s ease 0.8s;
 }
 
 .slide.active .chart-bar-value {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
 }
 
 .chart-bar-label {
@@ -993,7 +1057,7 @@ h1, h2, h3, h4 {
 .world-map-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     opacity: 0.75;
     z-index: 1;
 }
@@ -1148,11 +1212,11 @@ h1, h2, h3, h4 {
 }
 
 /* Pin coordinates on visual */
-#pin-morrisville { top: 38%; left: 17.5%; }
-#pin-beijing { top: 38%; left: 70.0%; }
-#pin-stuttgart { top: 35%; left: 49.5%; }
-#pin-singapore { top: 62.5%; left: 70.5%; }
-#pin-yamato { top: 38%; left: 79.0%; }
+#pin-morrisville { top: 38%; left: 21.0%; }
+#pin-beijing { top: 38%; left: 74.0%; }
+#pin-stuttgart { top: 34%; left: 51.5%; }
+#pin-singapore { top: 59.0%; left: 74.5%; }
+#pin-yamato { top: 37%; left: 81.5%; }
 
 /* ----------------------------------------------------
    SLIDE 8: CONCLUSION
@@ -1427,7 +1491,15 @@ h1, h2, h3, h4 {
     transition: height 1s ease-out 0.3s;
 }
 .slide.active .pk-bar-inner-mp {
-    height: 45%;
+    height: 30%;
+}
+
+.pk-bar-inner-others {
+    height: 0%;
+    transition: height 1s ease-out 0.3s;
+}
+.slide.active .pk-bar-inner-others {
+    height: 15%;
 }
 
 .pk-bar-inner-grey {
@@ -1450,9 +1522,8 @@ h1, h2, h3, h4 {
     font-size: 0.9rem;
     padding: 5px 15px;
     letter-spacing: 0.1em;
-    text-transform: uppercase;
+    border-radius: 3px;
     z-index: 100;
-    transform: skewX(-10deg);
     box-shadow: 0 4px 10px rgba(226, 26, 34, 0.2);
     pointer-events: none;
     transition: opacity 0.4s ease;
@@ -1461,7 +1532,6 @@ h1, h2, h3, h4 {
 
 .top-brand-logo span {
     display: inline-block;
-    transform: skewX(10deg);
 }
 
 /* ----------------------------------------------------

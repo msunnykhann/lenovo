@@ -1,64 +1,25 @@
 const presenterNotes = [
-    // Slide 1
+    // Slide 1 (Cover)
     `<strong>Slide 1: Title Screen</strong>
     <ul>
-        <li>Welcome the audience and state the topic: Lenovo Corporation.</li>
-        <li>Lenovo is a global technology powerhouse, and today we will cover its milestones, products, financials, global footprint, and the landmark 2005 IBM PC acquisition.</li>
-        <li>Mention that it operates under the core vision: "Smarter Technology for All."</li>
+        <li>Welcome the audience and introduce yourself: Muhammad Sunny, Assistant Manager, Application Development at Muller & Phipps Pakistan.</li>
+        <li>State the topic: Lenovo Corporation's journey of innovation, strategy, and transformation.</li>
+        <li>Today we will cover Lenovo's global footprint, milestones, products, 2026 financials, and the authorized channel distribution in Pakistan.</li>
     </ul>`,
     
-    // Slide 2
-    `<strong>Slide 2: Introduction & Key Stats</strong>
+    // Slide 2 (Intro)
+    `<strong>Slide 2: Introduction & Brand Story</strong>
     <ul>
-        <li>Lenovo is a Fortune Global 500 company, currently ranked #196.</li>
-        <li>Explain the dual-headquarters model: Beijing (operational hub) and Morrisville, North Carolina (corporate headquarters).</li>
-        <li>Highlight the scale: 180+ markets, 72,000 employees worldwide, and over 30 manufacturing plants.</li>
-        <li>State their vision to make technology accessible and smarter for everyone.</li>
+        <li>Introduce the host brand: Lenovo (Fortune Global 500 company ranking #196).</li>
+        <li><strong>Tell the Story:</strong> Liu Chuanzhi and 10 engineers starting "Legend" in a tiny Beijing guardhouse (1984) with only $25,000.</li>
+        <li>Explain the transition: Rebranding as Lenovo in 2003 ("Le" from Legend + "novo" meaning new in Latin, thus "New Legend").</li>
+        <li>Explain the Logo symbolism: Slanted rectangle represents dynamic speed, agility, and forward momentum.</li>
+        <li>Point out the landmark milestone: Acquiring IBM's PC division (2005) which established global reach.</li>
+        <li>Highlight scale: 180+ markets, 72K employees, and 30+ manufacturing hubs.</li>
     </ul>`,
     
-    // Slide 3
-    `<strong>Slide 3: The Lenovo Odyssey (Timeline)</strong>
-    <ul>
-        <li>Frame this slide as a chronological story with 7 distinct chapters:</li>
-        <li><strong>Ch 1 (1984):</strong> Detail the humble guardhouse origins in Beijing and the name 'Legend'.</li>
-        <li><strong>Ch 2 (1992):</strong> Introduce the ThinkPad 700C, inspired by the Japanese bento box.</li>
-        <li><strong>Ch 3 (2005):</strong> Exploded onto the world stage by acquiring IBM's PC unit (the turning point). <em>Acquisition details:</em> $1.25B cash/equity + $500M liabilities. IBM took 18.9% stake. Instantly became 3rd largest PC maker and gained ThinkPad brand.</li>
-        <li><strong>Ch 4 (2013):</strong> Climbed to the global summit, becoming the World's #1 PC manufacturer.</li>
-        <li><strong>Ch 5 (2014):</strong> Diversified into mobile (Motorola) and servers to build an enterprise ecosystem.</li>
-        <li><strong>Ch 6 (2020):</strong> Released the Yoga 5G, merging laptops with high-speed cellular capability.</li>
-        <li><strong>Ch 7 (2026):</strong> Emphasize the pivot into the Hybrid AI era with historic $83.1B in revenues.</li>
-    </ul>`,
-    
-    // Slide 4
-    `<strong>Slide 4: Products & Services Portfolio</strong>
-    <ul>
-        <li>Explain the transition from a pure PC manufacturer to an all-round infrastructure and service leader.</li>
-        <li><strong>PCs:</strong> ThinkPad (enterprise durability), Yoga (2-in-1 premium), Legion (heavy gaming), IdeaPad (consumer).</li>
-        <li><strong>Mobile:</strong> Motorola Razr foldable flip devices and Motorola Edge.</li>
-        <li><strong>Infrastructure (ISG):</strong> ThinkSystem servers and liquid-cooled AI clusters for deep learning.</li>
-        <li><strong>Services (SSG):</strong> TruScale (flexible pay-as-you-go IT infrastructure) and Premium Care.</li>
-    </ul>`,
-    
-    // Slide 5
-    `<strong>Slide 5: Competitor Analysis</strong>
-    <ul>
-        <li>Analyze the competitive landscape globally and locally in Pakistan.</li>
-        <li><strong>Global:</strong> Lenovo leads the global PC market at 24.4%, with HP (~20%) and Dell (~16%) as main rivals.</li>
-        <li><strong>Pakistan:</strong> HP (ProBook/EliteBook) and Dell (Inspiron/Latitude) are the primary competitors.</li>
-        <li><strong>Segments:</strong> Lenovo's Legion dominates local high-end gaming demand due to cooling; ThinkPad goes head-to-head with HP EliteBook in corporate deals.</li>
-    </ul>`,
-    
-    // Slide 6
-    `<strong>Slide 6: Financial Performance 2026</strong>
-    <ul>
-        <li>Highlight the massive growth: Revenue of $83.1 Billion representing a 20% Year-over-Year increase.</li>
-        <li>Net income skyrocketed by 38% to reach $1.9 Billion.</li>
-        <li><strong>AI Focus:</strong> AI infrastructure and AI PCs now make up 33% of total revenue, doubling YoY.</li>
-        <li>PC market share sits at 24.4%, widening the lead over competitors to its highest in 15 years.</li>
-    </ul>`,
-    
-    // Slide 7
-    `<strong>Slide 7: Global Footprint & Hubs</strong>
+    // Slide 3 (Global Map)
+    `<strong>Slide 3: Global Footprint & Hubs</strong>
     <ul>
         <li>Explain that Lenovo relies on a decentralized, resilient global supply chain.</li>
         <li>Point out the key hubs on the map:</li>
@@ -68,26 +29,80 @@ const presenterNotes = [
         <li><strong>Singapore:</strong> Core financial hub and sales gateway for Southeast Asia.</li>
         <li><strong>Yamato (Japan):</strong> The famous engineering laboratory where the ThinkPad is designed and stress-tested.</li>
     </ul>`,
-
-    // Slide 8
-    `<strong>Slide 8: FIFA World Cup 2026 Partnership</strong>
+    
+    // Slide 4 (History Timeline)
+    `<strong>Slide 4: The Lenovo Odyssey (Timeline)</strong>
     <ul>
-        <li>Discuss Lenovo's historic signing as the Official FIFA Technology Partner.</li>
-        <li>The tournament will span across USA, Canada, and Mexico (2026).</li>
-        <li>Detail the technology integration: supplying player analytics, tracking, telemetry systems, and data infrastructure.</li>
-        <li>Lenovo ThinkSystem edge servers will power real-time computing inside the stadiums.</li>
+        <li>Frame this slide as a chronological story with 8 distinct chapters:</li>
+        <li><strong>Ch 1 (1984):</strong> Detail the humble guardhouse origins in Beijing and the name 'Legend'.</li>
+        <li><strong>Ch 2 (1992):</strong> Introduce the ThinkPad 700C, inspired by the Japanese bento box.</li>
+        <li><strong>Ch 3 (2005):</strong> Exploded onto the world stage by acquiring IBM's PC unit (the turning point). <em>Acquisition details:</em> $1.25B cash/equity + $500M liabilities. IBM took 18.9% stake. Instantly became 3rd largest PC maker and gained ThinkPad brand.</li>
+        <li><strong>Ch 4 (2013):</strong> Climbed to the global summit, becoming the World's #1 PC manufacturer. (Source: Gartner & IDC Q2 2013 reports, confirming overtaking HP).</li>
+        <li><strong>Ch 5 (2014):</strong> Diversified into mobile (Motorola) and servers to build an enterprise ecosystem.</li>
+        <li><strong>Ch 6 (2020):</strong> Released the Yoga 5G, merging laptops with high-speed cellular capability.</li>
+        <li><strong>Ch 7 (2026):</strong> Emphasize the pivot into the Hybrid AI era with historic $83.1B in revenues.</li>
+        <li><strong>Ch 8 (2028+):</strong> Future vision. Highlights Intelligent Transformation, Net-Zero emissions target by 2050 (validated by SBTi), and the Vision 2028 $100 Billion revenue target. Mention the Lenovo Foundation's STEM programs.</li>
+    </ul>`,
+    
+    // Slide 5 (Products)
+    `<strong>Slide 5: Products & Services Portfolio</strong>
+    <ul>
+        <li>Explain the transition from a pure PC manufacturer to an all-round infrastructure and service leader.</li>
+        <li><strong>PCs:</strong> ThinkPad (enterprise durability), Yoga (2-in-1 premium), Legion (heavy gaming), IdeaPad (consumer).</li>
+        <li><strong>Mobile:</strong> Motorola Razr foldable flip devices and Motorola Edge.</li>
+        <li><strong>Infrastructure (ISG):</strong> ThinkSystem servers and liquid-cooled AI clusters for deep learning.</li>
+        <li><strong>Services (SSG):</strong> TruScale (flexible pay-as-you-go IT infrastructure) and Premium Care.</li>
+    </ul>`,
+    
+    // Slide 6 (ThinkVision)
+    `<strong>Slide 6: ThinkVision 20 Years of Innovation</strong>
+    <ul>
+        <li>State the milestone: Celebrates 20 years (since 2003) as the premier desktop partner to ThinkPad.</li>
+        <li><strong>Explain Pillar 1 - Visual Precision:</strong> Factory color calibration (Delta E &lt; 2) with 99% DCI-P3 wide color gamut. Up to 1152-zone Mini-LED screens for high contrast HDR.</li>
+        <li><strong>Explain Pillar 2 - User Wellness:</strong> Signature red stand clip, full tilt/pivot/height ergonomics, and hardware-based TUV Eyesafe reducing fatigue without yellow screen shifts.</li>
+        <li><strong>Explain Pillar 3 - Smart VoIP Workspaces:</strong> Integrated webcams, soundbars, daisy-chaining, and single-cable 100W USB-C docking power delivery.</li>
+        <li><strong>Explain Pillar 4 - Green Engineering:</strong> Made of 85% Post-Consumer Recycled (PCC) plastics, 100% plastic-free biodegradable buffers, and Carbon Offset lifestyle services.</li>
+    </ul>`,
+    
+    // Slide 7 (Competitor)
+    `<strong>Slide 7: Competitor Analysis</strong>
+    <ul>
+        <li>Analyze the competitive landscape globally and locally in Pakistan.</li>
+        <li><strong>Global:</strong> Lenovo leads the global PC market at 24.4%, with HP (~20%) and Dell (~16%) as main rivals.</li>
+        <li><strong>Pakistan:</strong> HP (ProBook/EliteBook) and Dell (Inspiron/Latitude) are the primary competitors.</li>
+        <li><strong>Segments:</strong> Lenovo's Legion dominates local high-end gaming demand due to cooling; ThinkPad goes head-to-head with HP EliteBook in corporate deals.</li>
+    </ul>`,
+    
+    // Slide 8 (Financials)
+    `<strong>Slide 8: Financial Performance (5-Year Trend & Vision 2028)</strong>
+    <ul>
+        <li><strong>Explain the 5-Year Revenue Curve:</strong> Walk the audience through the trend:</li>
+        <li><strong>FY22 ($71.6B):</strong> Post-pandemic peak demand.</li>
+        <li><strong>FY23-24 ($62.0B - $56.9B):</strong> Global PC market cooling off & inventory consolidation.</li>
+        <li><strong>FY25-26 ($69.8B - $83.1B):</strong> Massive recovery curve, setting an all-time record peak in FY26.</li>
+        <li><strong>Growth Drivers:</strong> Highlights include a 20% YoY Revenue jump ($83.1B), 38% YoY Net Income surge ($1.9B), and 33% AI hardware share.</li>
+        <li><strong>Vision 2028:</strong> Highlight the forward-looking roadmap to reach <strong>$100 Billion</strong> in annual revenue by 2028, driven by hybrid AI infrastructure, Neptune cooling systems, and solutions expansion.</li>
     </ul>`,
 
-    // Slide 9
-    `<strong>Slide 9: AI PC & Hybrid AI Strategy</strong>
+    // Slide 9 (FIFA)
+    `<strong>Slide 9: FIFA World Cup 2026 Partnership (Post-Event Success)</strong>
+    <ul>
+        <li>Explain that since the World Cup has successfully concluded, we can talk about Lenovo's flawless execution.</li>
+        <li>Lenovo acted as the <strong>Official FIFA Technology Partner</strong> across the USA, Canada, and Mexico.</li>
+        <li>Detail the deployment scale: Powered real-time player telemetry, ball tracking analytics, and data graphics.</li>
+        <li>Emphasize that Lenovo ThinkSystem edge servers successfully powered computing tasks inside all stadiums across all 104 matches without any downtime.</li>
+    </ul>`,
+
+    // Slide 10 (AI PC)
+    `<strong>Slide 10: AI PC & Hybrid AI Strategy</strong>
     <ul>
         <li>Explain the "AI for All" hybrid AI vision: combining public cloud speed with private on-device security.</li>
         <li><strong>Hardware:</strong> Next-generation devices shipping with dedicated Neural Processing Units (NPUs).</li>
         <li><strong>Data Centers:</strong> Lenovo Neptune direct liquid-cooling technology reduces server energy consumption by up to 40%.</li>
     </ul>`,
 
-    // Slide 10
-    `<strong>Slide 10: Lenovo & M&P Distribution (Pakistan)</strong>
+    // Slide 11 (M&P Distribution)
+    `<strong>Slide 11: Lenovo & M&P Distribution (Pakistan)</strong>
     <ul>
         <li>Introduce Muller & Phipps (M&P) as the official authorized distributor for Lenovo in Pakistan.</li>
         <li>Logistics and reseller dealer networks are managed via M&P's tech arm, Tech Sirat (acquired in 2016).</li>
@@ -95,24 +110,22 @@ const presenterNotes = [
         <li>Explain the official warranty benefit: 1-2 years direct local manufacturer warranty on authorized imports.</li>
     </ul>`,
 
-    // Slide 11
-    `<strong>Slide 11: M&P vs. Grey Market Dynamics</strong>
+    // Slide 12 (Grey Market)
+    `<strong>Slide 12: M&P vs. Grey Market Dynamics</strong>
     <ul>
-        <li>Analyze the local Pakistan laptop market structure: Authorized imports hold 45% share, while Grey Market imports hold 55%.</li>
-        <li><strong>Authorized Channel:</strong> Fully compliant customs duties, 100% brand new, with full local support.</li>
-        <li><strong>Grey Market:</strong> Void warranty, third-party repair, and potential for refurbished or box-opened units.</li>
-        <li><strong>M&P Revenue Drivers:</strong> Strongly driven by B2B enterprise contracts and government/education tenders.</li>
-        <li>Highlight the 15% YoY growth for M&P as local companies prioritize compliance.</li>
+        <li>Analyze the local Pakistan laptop market structure: M&P Share holds 30%, Other Official Channels hold 15%, and Grey Market imports hold 55%.</li>
+        <li>Explain that Other Official channels include JOSS Computers, Unique Technologies, and HCom Distributors.</li>
+        <li><strong>Authorized Channels:</strong> Fully compliant customs duties, 100% brand new, with full local warranty & parts support.</li>
+        <li><strong>Grey Market:</strong> Void local warranty, delayed parts support, tax evasion, and risk of refurbished goods.</li>
+        <li><strong>M&P Revenue Drivers:</strong> B2B enterprise contracts and government/education tenders make up 65% of revenue.</li>
     </ul>`,
     
-    // Slide 12
-    `<strong>Slide 12: Sustainability & Future Vision</strong>
+    // Slide 13 (Thank You)
+    `<strong>Slide 13: Concluding Remarks (Thank You)</strong>
     <ul>
-        <li><strong>Intelligent Transformation:</strong> Diversifying beyond PCs into cloud, AI, and smart infrastructure.</li>
-        <li><strong>Sustainability:</strong> Committing to Net-Zero greenhouse emissions by 2050, validated by SBTi.</li>
-        <li><strong>Growth Target:</strong> Aiming to cross the $100 Billion revenue milestone by 2028.</li>
-        <li><strong>Lenovo Foundation:</strong> Corporate social responsibility focusing on STEM education and digital inclusion.</li>
-        <li>Open the floor for questions and thank the audience.</li>
+        <li>Thank the audience for their time and attention.</li>
+        <li>Reiterate Lenovo's core commitment: "Smarter Technology for All."</li>
+        <li>Provide official website and support portal contacts for follow-up communication.</li>
     </ul>`
 ];
 
@@ -188,18 +201,18 @@ function goToSlide(index) {
     slides[currentSlide].classList.remove('active');
     
     // If moving away from financial slide (index 5), reset charts
-    if (currentSlide === 6) {
+    if (currentSlide === 7) {
         resetFinancialCharts();
     }
     
     const previousSlide = currentSlide;
     currentSlide = index;
     
-    // If navigating to Slide 3 (index 2 - History), set timeline state based on direction
-    if (currentSlide === 2) {
+    // If navigating to Slide 4 (index 3 - History), set timeline state based on direction
+    if (currentSlide === 3) {
         const timelineBtns = document.querySelectorAll('.timeline-btn');
         if (timelineBtns.length > 0) {
-            const targetBtn = previousSlide > 2 ? timelineBtns[timelineBtns.length - 1] : timelineBtns[0];
+            const targetBtn = previousSlide > 3 ? timelineBtns[timelineBtns.length - 1] : timelineBtns[0];
             if (targetBtn) {
                 targetBtn.click();
             }
@@ -207,10 +220,10 @@ function goToSlide(index) {
     }
     
     // If navigating to Slide 4 (index 3 - Products & Services), set products tab based on direction
-    if (currentSlide === 3) {
+    if (currentSlide === 4) {
         const productBtns = document.querySelectorAll('.product-menu-btn');
         if (productBtns.length > 0) {
-            const targetBtn = previousSlide > 3 ? productBtns[productBtns.length - 1] : productBtns[0];
+            const targetBtn = previousSlide > 4 ? productBtns[productBtns.length - 1] : productBtns[0];
             if (targetBtn) {
                 targetBtn.click();
             }
@@ -238,7 +251,7 @@ function goToSlide(index) {
     currentSlideNum.textContent = currentSlide + 1;
     
     // Trigger animations if active slide is Financial (index 5)
-    if (currentSlide === 6) {
+    if (currentSlide === 7) {
         animateFinancialCharts();
     }
     
@@ -247,9 +260,11 @@ function goToSlide(index) {
 }
 
 function nextSlide() {
-    // If on Slide 3 (index 2 - History) and not on last chapter, advance timeline chapter instead
-    if (currentSlide === 2) {
-        const activeBtn = document.querySelector('.timeline-btn.active');
+    const activeSlideEl = slides[currentSlide];
+    
+    // If on History Timeline slide and not on last chapter, advance timeline chapter instead
+    if (activeSlideEl && activeSlideEl.querySelector('.timeline-nav-horizontal')) {
+        const activeBtn = activeSlideEl.querySelector('.timeline-btn.active');
         if (activeBtn) {
             const nextBtn = activeBtn.nextElementSibling;
             if (nextBtn && nextBtn.classList.contains('timeline-btn')) {
@@ -259,9 +274,9 @@ function nextSlide() {
         }
     }
     
-    // If on Slide 4 (index 3 - Products & Services) and not on last product tab, advance product tab instead
-    if (currentSlide === 3) {
-        const activeBtn = document.querySelector('.product-menu-btn.active');
+    // If on Products Portfolio slide and not on last product tab, advance product tab instead
+    if (activeSlideEl && activeSlideEl.querySelector('.products-menu')) {
+        const activeBtn = activeSlideEl.querySelector('.product-menu-btn.active');
         if (activeBtn) {
             const nextBtn = activeBtn.nextElementSibling;
             if (nextBtn && nextBtn.classList.contains('product-menu-btn')) {
@@ -277,9 +292,11 @@ function nextSlide() {
 }
 
 function prevSlide() {
-    // If on Slide 3 (index 2 - History) and not on first chapter, go back timeline chapter instead
-    if (currentSlide === 2) {
-        const activeBtn = document.querySelector('.timeline-btn.active');
+    const activeSlideEl = slides[currentSlide];
+    
+    // If on History Timeline slide and not on first chapter, go back timeline chapter instead
+    if (activeSlideEl && activeSlideEl.querySelector('.timeline-nav-horizontal')) {
+        const activeBtn = activeSlideEl.querySelector('.timeline-btn.active');
         if (activeBtn) {
             const prevBtn = activeBtn.previousElementSibling;
             if (prevBtn && prevBtn.classList.contains('timeline-btn')) {
@@ -289,9 +306,9 @@ function prevSlide() {
         }
     }
     
-    // If on Slide 4 (index 3 - Products & Services) and not on first product tab, go back product tab instead
-    if (currentSlide === 3) {
-        const activeBtn = document.querySelector('.product-menu-btn.active');
+    // If on Products Portfolio slide and not on first product tab, go back product tab instead
+    if (activeSlideEl && activeSlideEl.querySelector('.products-menu')) {
+        const activeBtn = activeSlideEl.querySelector('.product-menu-btn.active');
         if (activeBtn) {
             const prevBtn = activeBtn.previousElementSibling;
             if (prevBtn && prevBtn.classList.contains('product-menu-btn')) {
@@ -539,6 +556,32 @@ function handleSwipe() {
         prevSlide(); // Swipe Right -> Prev Slide
     }
 }
+
+// Dynamic sub-product card hover image switcher
+document.querySelectorAll('.sub-product-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        const targetImgPath = this.getAttribute('data-image');
+        if (!targetImgPath) return;
+
+        const parentSplit = this.closest('.product-grid-split');
+        if (!parentSplit) return;
+
+        const imgEl = parentSplit.querySelector('.product-showcase-img');
+        if (!imgEl) return;
+
+        if (imgEl.src.includes(targetImgPath)) return;
+
+        // Apply smooth transition opacity toggle
+        imgEl.style.opacity = '0.2';
+        imgEl.style.transform = 'scale(0.97)';
+        
+        setTimeout(() => {
+            imgEl.src = targetImgPath;
+            imgEl.style.opacity = '1';
+            imgEl.style.transform = 'scale(1)';
+        }, 150);
+    });
+});
 
 // Initial Notes Setup
 updatePresenterNotes();

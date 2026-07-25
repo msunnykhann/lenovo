@@ -26,36 +26,70 @@
                 
                 <!-- SLIDE 1: Title Screen -->
                 <section class="slide active" id="slide-1" data-slide-index="0">
-                    <div class="slide-title-screen">
-                        <div class="title-badge">Global Presentation</div>
-                        <div class="lenovo-logo-container"><span>LENOVO</span></div>
-                        <h1 class="main-title">Smarter Technology for All</h1>
-                        <p class="subtitle">A Journey of Innovation, Strategy & Transformation</p>
-                        <div class="title-footer">
-                            <p>Use Left/Right Arrows, Spacebar, or your Presentation Clicker to navigate.</p>
+                    <div class="grid-2" style="height: 100%; align-items: center; gap: 40px;">
+                        <!-- Left Column: Title & Presenter Info -->
+                        <div style="display: flex; flex-direction: column; align-items: flex-start; text-align: left; height: 100%; justify-content: center;">
+                            <div class="title-badge" style="margin-bottom: 16px;">Global Presentation</div>
+                            <div class="lenovo-logo-container" style="margin-bottom: 20px; font-size: 2.2rem; padding: 8px 24px;"><span>Lenovo</span></div>
+                            <h1 class="main-title" style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 12px; font-weight: 800; text-align: left;">Smarter Technology<br>for All</h1>
+                            <p class="subtitle" style="font-size: 1.15rem; color: var(--text-secondary); margin-bottom: 24px; font-weight: 400; text-align: left; line-height: 1.4; max-width: 90%;">A Journey of Innovation, Strategy & Transformation</p>
+                            
+                            <!-- Presenter Info Block (High-Tech Styling) -->
+                            <div class="presenter-card-cover" style="padding: 14px 20px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 8px; display: flex; flex-direction: column; align-items: flex-start; gap: 4px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); width: 100%; max-width: 380px;">
+                                <span style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em;">Presented By</span>
+                                <span style="font-size: 1.25rem; color: #fff; font-weight: 700; font-family: var(--font-heading);">Muhammad Sunny</span>
+                                <span style="font-size: 0.85rem; color: var(--brand-red); font-weight: 600; letter-spacing: 0.02em;">Assistant Manager, Application Development</span>
+                                <span style="font-size: 0.78rem; color: var(--text-secondary); font-weight: 500;">Muller & Phipps Pakistan (Pvt.) Ltd.</span>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Premium Technology Showcase Image -->
+                        <div style="height: 100%; display: flex; align-items: center; justify-content: center; position: relative;">
+                            <!-- Futuristic Glow Box -->
+                            <div style="position: absolute; top: 10%; left: 10%; right: 10%; bottom: 10%; background: radial-gradient(circle, rgba(226, 26, 34, 0.15) 0%, transparent 70%); filter: blur(30px); pointer-events: none; z-index: 0;"></div>
+                            <!-- Showcase Frame -->
+                            <div class="product-img-frame" style="width: 100%; height: 350px; border-radius: 20px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: 0 20px 40px rgba(0,0,0,0.6); z-index: 1; position: relative;">
+                                <img src="images/cover.jpg" alt="Lenovo Cinematic Cover Visual" class="product-showcase-img" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
                         </div>
                     </div>
                 </section>
 
                 <!-- SLIDE 2: Introduction -->
                 <section class="slide" id="slide-2" data-slide-index="1">
-                    <h2 class="slide-title"><span>01.</span> Introduction</h2>
-                    <div class="grid-2" style="margin-bottom: 30px;">
+                    <h2 class="slide-title"><span>01.</span> Introduction: The Lenovo Story</h2>
+                    <div class="grid-2" style="margin-bottom: 20px;">
+                        <!-- Left Column: Storytelling Narrative -->
                         <div class="deal-key-stats">
-                            <div class="card">
-                                <h3 style="margin-bottom: 8px; color: #fff;">Global Powerhouse</h3>
-                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.5;">Lenovo is a Fortune Global 500 tech giant ranking <strong>#196</strong>. We deliver cutting-edge technology to consumers and enterprises worldwide.</p>
+                            <div class="card" style="padding: 16px 20px;">
+                                <h3 style="margin-bottom: 6px; color: #fff; font-size: 1.1rem;">From Legend to Global Leader</h3>
+                                <p style="color: var(--text-secondary); font-size: 0.8rem; line-height: 1.45; margin-bottom: 8px;">
+                                    In 1984, 11 visionary engineers led by Liu Chuanzhi founded the company in a tiny Beijing guardhouse with just $25,000, naming it <strong>"Legend"</strong> to bring digital computing power to households.
+                                </p>
+                                <p style="color: var(--text-secondary); font-size: 0.8rem; line-height: 1.45; margin-bottom: 8px;">
+                                    <strong>Name Origin (2003):</strong> To expand globally, they rebranded as <strong>Lenovo</strong>. <strong>"Le"</strong> honors their heritage (Legend), while <strong>"novo"</strong> is Latin for new (innovation) — symbolizing a <strong>"New Legend"</strong> combining heritage with future vision.
+                                </p>
+                                <p style="color: var(--text-secondary); font-size: 0.8rem; line-height: 1.45; margin: 0;">
+                                    <strong>Logo Meaning:</strong> The iconic slanted rectangular logo symbol represents dynamic speed, agility, and forward momentum. In 2005, Lenovo acquired IBM's PC unit, establishing global presence.
+                                </p>
                             </div>
-                            <div class="card">
-                                <h3 style="margin-bottom: 8px; color: #fff;">Dual Headquarters</h3>
-                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.5;">Operating in global markets with key corporate hubs in <strong>Beijing, China</strong> and <strong>Morrisville, North Carolina, USA</strong>.</p>
+                            <div class="card" style="padding: 12px 20px; border-radius: 12px;">
+                                <h3 style="margin-bottom: 4px; color: #fff; font-size: 0.95rem;">Dual Headquarters Model</h3>
+                                <p style="color: var(--text-secondary); font-size: 0.78rem; line-height: 1.4; margin: 0;">
+                                    Operating as a global anchor with decentralized headquarters in <strong>Beijing, China</strong> (operational engine) and <strong>Morrisville, USA</strong> (corporate sales & leadership).
+                                </p>
                             </div>
                         </div>
-                        <div class="motto-card">
-                            <div class="motto-label">Corporate Motto</div>
-                            <div class="motto-text">"Smarter Technology for All"</div>
+
+                        <!-- Right Column: Logo Evolution Showcase -->
+                        <div style="display: flex; flex-direction: column; gap: 16px; height: 100%;">
+                            <div class="product-img-frame" style="height: 340px; overflow: hidden; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: 0 10px 30px rgba(0,0,0,0.6); background: #fff; padding: 12px; display: flex; align-items: center; justify-content: center;">
+                                <img src="images/logo_history.png" alt="Lenovo Logo Evolution" class="product-showcase-img" style="width: 100%; height: 100%; object-fit: contain;">
+                            </div>
                         </div>
                     </div>
+                    
+                    <!-- Bottom Column: Core Stats -->
                     <div class="grid-3">
                         <div class="card" style="text-align: center; padding: 1rem;">
                             <div class="stat-number">180+</div>
@@ -72,52 +106,111 @@
                     </div>
                 </section>
 
-                <!-- SLIDE 3: History & Milestones -->
+<!-- SLIDE 3: Global Presence -->
                 <section class="slide" id="slide-3" data-slide-index="2">
-                    <h2 class="slide-title"><span>02.</span> The Lenovo Odyssey: From Guardhouse to Giant</h2>
+                    <h2 class="slide-title"><span>02.</span> Global Footprint & Operations</h2>
+                    <div class="map-layout">
+                        <div class="map-visualization">
+                            <!-- Premium Colorful Stylized World Map -->
+                            <img src="images/worldmap.png" alt="Lenovo Global Operations Map" class="world-map-image">
+                            <!-- Interactive Pins -->
+                            <div class="map-pin" id="pin-morrisville" data-hub="morrisville">
+                                <div class="pin-dot"></div>
+                                <div class="pin-pulse"></div>
+                                <span class="pin-label">Morrisville (US)</span>
+                            </div>
+                            <div class="map-pin" id="pin-beijing" data-hub="beijing">
+                                <div class="pin-dot"></div>
+                                <div class="pin-pulse"></div>
+                                <span class="pin-label">Beijing (CN)</span>
+                            </div>
+                            <div class="map-pin" id="pin-stuttgart" data-hub="stuttgart">
+                                <div class="pin-dot"></div>
+                                <div class="pin-pulse"></div>
+                                <span class="pin-label">Stuttgart (DE)</span>
+                            </div>
+                            <div class="map-pin" id="pin-singapore" data-hub="singapore">
+                                <div class="pin-dot"></div>
+                                <div class="pin-pulse"></div>
+                                <span class="pin-label">Singapore</span>
+                            </div>
+                            <div class="map-pin" id="pin-yamato" data-hub="yamato">
+                                <div class="pin-dot"></div>
+                                <div class="pin-pulse"></div>
+                                <span class="pin-label">Yamato (JP)</span>
+                            </div>
+                        </div>
+                        <div class="map-info-card" id="map-info-panel">
+                            <h3 class="map-hub-name" id="hub-title">Morrisville Hub</h3>
+                            <span class="map-hub-region" id="hub-region">USA</span>
+                            
+                            <div class="map-hub-detail-row">
+                                <span class="map-hub-detail-label">Key Focus</span>
+                                <span class="map-hub-detail-val" id="hub-focus">Global Corporate HQ & R&D</span>
+                            </div>
+                            <div class="map-hub-detail-row">
+                                <span class="map-hub-detail-label">Significance</span>
+                                <span class="map-hub-detail-val" id="hub-sig">Center of US PC operations & logistics</span>
+                            </div>
+                            <div class="map-hub-detail-row">
+                                <span class="map-hub-detail-label">Staff Footprint</span>
+                                <span class="map-hub-detail-val" id="hub-staff">Core Leadership Team</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SLIDE 4: History & Milestones -->
+                <section class="slide" id="slide-4" data-slide-index="3">
+                    <h2 class="slide-title"><span>03.</span> The Lenovo Odyssey: From Guardhouse to Giant</h2>
                     <div class="timeline-container-horizontal">
                         <!-- Horizontal Timeline Track & Nodes (Cinematic Tech Style) -->
                         <div class="timeline-nav-horizontal">
                             <div class="timeline-track"></div>
-                            <button class="timeline-btn active" data-year="1984">
+                            <button class="timeline-btn  landmark-milestone active" data-year="1984">
                                 <span class="timeline-dot"></span>
                                 <span class="timeline-year-text">1984</span>
                                 <span class="timeline-chapter-text">The Guardhouse</span>
                             </button>
-                            <button class="timeline-btn" data-year="1992">
+                            <button class="timeline-btn landmark-milestone" data-year="1992">
                                 <span class="timeline-dot"></span>
                                 <span class="timeline-year-text">1992</span>
                                 <span class="timeline-chapter-text">Bento Box</span>
                             </button>
-                            <button class="timeline-btn" data-year="2005">
+                            <button class="timeline-btn landmark-milestone" data-year="2005">
                                 <span class="timeline-dot"></span>
                                 <span class="timeline-year-text">2005</span>
                                 <span class="timeline-chapter-text">The Giant Leap</span>
                             </button>
-                            <button class="timeline-btn" data-year="2013">
+                            <button class="timeline-btn landmark-milestone" data-year="2013">
                                 <span class="timeline-dot"></span>
                                 <span class="timeline-year-text">2013</span>
                                 <span class="timeline-chapter-text">The Summit</span>
                             </button>
-                            <button class="timeline-btn" data-year="2014">
+                            <button class="timeline-btn landmark-milestone" data-year="2014">
                                 <span class="timeline-dot"></span>
                                 <span class="timeline-year-text">2014</span>
                                 <span class="timeline-chapter-text">Ecosystem</span>
                             </button>
-                            <button class="timeline-btn" data-year="2020">
+                            <button class="timeline-btn landmark-milestone" data-year="2020">
                                 <span class="timeline-dot"></span>
                                 <span class="timeline-year-text">2020</span>
                                 <span class="timeline-chapter-text">Cellular PC</span>
                             </button>
-                            <button class="timeline-btn" data-year="2026">
+                            <button class="timeline-btn landmark-milestone" data-year="2026">
                                 <span class="timeline-dot"></span>
                                 <span class="timeline-year-text">2026</span>
                                 <span class="timeline-chapter-text">The AI Era</span>
                             </button>
+                            <button class="timeline-btn landmark-milestone" data-year="2028">
+                                <span class="timeline-dot"></span>
+                                <span class="timeline-year-text">2028+</span>
+                                <span class="timeline-chapter-text">Future Vision</span>
+                            </button>
                         </div>
                         
                         <!-- Timeline Details Panel -->
-                        <div class="timeline-content-panel card" style="flex: 1; height: 20rem; overflow: hidden; position: relative;">
+                        <div class="timeline-content-panel card" style="flex: 1; height: 22rem; overflow: hidden; position: relative;">
                             <!-- 1984 -->
                             <div class="timeline-detail active" id="detail-1984">
                                 <div class="timeline-detail-grid">
@@ -126,9 +219,12 @@
                                         <h3 class="timeline-title">Chapter 1: Out of the Guardhouse</h3>
                                         <p class="timeline-text">Eleven visionary Chinese scientists, led by Liu Chuanzhi, gather inside a drafty, tiny security guardhouse in Beijing with just 200,000 yuan. They name their dream <strong>"Legend"</strong>. Although their early attempts to distribute digital watches fail, they adapt, engineering a character-board that translates English OS into Chinese. The seed of a global titan is sown.</p>
                                     </div>
-                                    <div class="timeline-detail-image">
-                                        <div class="product-img-frame">
-                                            <img src="images/startup.jpg" alt="1984 Guardhouse Startup" class="product-showcase-img">
+                                    <div class="timeline-detail-image" style="display: flex; flex-direction: column; gap: 10px; height: 100%; justify-content: center;">
+                                        <div class="product-img-frame" style="height: 135px; overflow: hidden; border-radius: 12px; border: 1px solid var(--border-color); margin: 0; box-shadow: 0 4px 15px rgba(0,0,0,0.4);">
+                                            <img src="images/startup.jpg" alt="1984 Guardhouse Startup" class="product-showcase-img" style="width: 100%; height: 100%; object-fit: cover;">
+                                        </div>
+                                        <div class="product-img-frame" style="height: 95px; overflow: hidden; border-radius: 12px; border: 1px solid var(--border-color); background: #fff; padding: 8px; margin: 0; box-shadow: 0 4px 15px rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center;">
+                                            <img src="images/logo_history.png" alt="Legend & Lenovo Brand History" class="product-showcase-img" style="width: 100%; height: 100%; object-fit: contain;">
                                         </div>
                                     </div>
                                 </div>
@@ -150,35 +246,35 @@
                             </div>
                             <!-- 2005 -->
                             <div class="timeline-detail" id="detail-2005">
-                                <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 15px; height: 100%;">
+                                <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 20px; height: 100%;">
                                     <!-- Left Column: Story & Deal Metrics -->
                                     <div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
                                         <div>
-                                            <div class="timeline-year" style="font-size: 1.4rem; font-weight: bold; color: var(--brand-red); margin-bottom: 2px;">2005</div>
-                                            <h3 class="timeline-title" style="font-size: 1.05rem; margin-bottom: 6px; color: #fff;">Chapter 3: The Snake Swallows the Elephant</h3>
-                                            <p class="timeline-text" style="font-size: 0.8rem; line-height: 1.4; color: var(--text-secondary); margin-bottom: 8px;">
-                                                Legend (renamed <strong>Lenovo</strong>) acquires IBM's PC division for <strong>$1.25 billion</strong> cash/equity + <strong>$500 million</strong> liabilities. Critical pundits predicted failure; instead, it instantly forged the world's 3rd largest PC maker.
+                                            <div class="timeline-year">2005</div>
+                                            <h3 class="timeline-title">Chapter 3: The Snake Swallows the Elephant</h3>
+                                            <p class="timeline-text" style="font-size: 0.95rem; line-height: 1.5; color: var(--text-secondary); margin-bottom: 8px;">
+                                                Legend (renamed <strong>Lenovo</strong>) acquired IBM's PC division. Critical pundits predicted failure; instead, it instantly forged the world's 3rd largest PC maker.
                                             </p>
                                         </div>
                                         
                                         <!-- Deal Metrics Box -->
-                                        <div style="display: flex; gap: 8px; margin-bottom: 5px;">
-                                            <div class="deal-stat-card" style="flex: 1; padding: 6px 10px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 6px; display: flex; flex-direction: column;">
-                                                <span style="font-size: 0.65rem; color: var(--text-muted);">Deal Value</span>
-                                                <span style="font-size: 0.85rem; color: var(--brand-red); font-weight: bold;">$1.75 Billion</span>
+                                        <div style="display: flex; gap: 10px; margin-bottom: 5px;">
+                                            <div class="deal-stat-card" style="flex: 1; padding: 8px 12px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 6px; display: flex; flex-direction: column;">
+                                                <span style="font-size: 0.72rem; color: var(--text-muted);">Deal Value</span>
+                                                <span style="font-size: 0.98rem; color: var(--brand-red); font-weight: bold;">$1.75 Billion</span>
                                             </div>
-                                            <div class="deal-stat-card" style="flex: 1; padding: 6px 10px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 6px; display: flex; flex-direction: column;">
-                                                <span style="font-size: 0.65rem; color: var(--text-muted);">IBM PC Stake</span>
-                                                <span style="font-size: 0.85rem; color: #fff; font-weight: bold;">18.9% Equity</span>
+                                            <div class="deal-stat-card" style="flex: 1; padding: 8px 12px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 6px; display: flex; flex-direction: column;">
+                                                <span style="font-size: 0.72rem; color: var(--text-muted);">IBM PC Stake</span>
+                                                <span style="font-size: 0.98rem; color: #fff; font-weight: bold;">18.9% Equity</span>
                                             </div>
                                         </div>
                                     </div>
                                     
                                     <!-- Right Column: Before vs After Table & Image -->
-                                    <div style="display: flex; flex-direction: column; gap: 8px; justify-content: space-between; height: 100%;">
+                                    <div style="display: flex; flex-direction: column; gap: 10px; justify-content: space-between; height: 100%;">
                                         <!-- Mini Before vs After Table -->
-                                        <div class="card" style="padding: 10px 12px; margin: 0; background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.04);">
-                                            <table class="comp-table" style="font-size: 0.68rem; width: 100%; text-align: left;">
+                                        <div class="card" style="padding: 10px 14px; margin: 0; background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.04);">
+                                            <table class="timeline-mini-table">
                                                 <thead>
                                                     <tr>
                                                         <th>Entity</th>
@@ -189,25 +285,25 @@
                                                 <tbody>
                                                     <tr>
                                                         <td><strong>Lenovo</strong></td>
-                                                        <td style="font-size: 0.63rem; color: var(--text-muted);">Regional Chinese maker</td>
-                                                        <td style="font-size: 0.63rem; color: #fff;">Global PC leader</td>
+                                                        <td style="color: var(--text-muted);">Regional Chinese maker</td>
+                                                        <td style="color: #fff;">Global PC leader</td>
                                                     </tr>
                                                     <tr>
                                                         <td><strong>IBM</strong></td>
-                                                        <td style="font-size: 0.63rem; color: var(--text-muted);">PC + Server seller</td>
-                                                        <td style="font-size: 0.63rem; color: #fff;">Software/cloud focus</td>
+                                                        <td style="color: var(--text-muted);">PC + Server seller</td>
+                                                        <td style="color: #fff;">Software/cloud focus</td>
                                                     </tr>
                                                     <tr>
                                                         <td><strong>ThinkPad</strong></td>
-                                                        <td style="font-size: 0.63rem; color: var(--text-muted);">IBM division</td>
-                                                        <td style="font-size: 0.63rem; color: #fff;">Scaled globally</td>
+                                                        <td style="color: var(--text-muted);">IBM division</td>
+                                                        <td style="color: #fff;">Scaled globally</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                         
                                         <!-- Compact Handshake Image -->
-                                        <div style="height: 75px; overflow: hidden; border-radius: 6px; border: 1px solid rgba(255,255,255,0.05); position: relative;">
+                                        <div style="height: 80px; overflow: hidden; border-radius: 6px; border: 1px solid rgba(255,255,255,0.05); position: relative;">
                                             <img src="images/deal.jpg" alt="IBM PC Acquisition" style="width: 100%; height: 100%; object-fit: cover;">
                                         </div>
                                     </div>
@@ -219,7 +315,7 @@
                                     <div class="timeline-detail-info">
                                         <div class="timeline-year">2013</div>
                                         <h3 class="timeline-title">Chapter 4: Standing at the Summit</h3>
-                                        <p class="timeline-text">Skeptics are silenced. Through relentless supply chain optimization and expanding its catalog with pioneering models like the convertible Yoga laptops alongside the enterprise-standard ThinkPads, Lenovo officially claims the crown: <strong>becoming the #1 PC manufacturer on Earth</strong>.</p>
+                                        <p class="timeline-text">Skeptics are silenced. Through relentless supply chain optimization and expanding its catalog with pioneering models like the convertible Yoga laptops alongside the enterprise-standard ThinkPads, Lenovo officially claims the crown: <strong>becoming the #1 PC manufacturer on Earth</strong> <span style="font-size: 0.72rem; color: var(--text-muted); font-weight: normal; vertical-align: super;">[Gartner & IDC, Q2 2013]</span>.</p>
                                     </div>
                                     <div class="timeline-detail-image">
                                         <div class="product-img-frame">
@@ -273,13 +369,55 @@
                                     </div>
                                 </div>
                             </div>
+                            
+                            <!-- 2028+ / Future -->
+                            <div class="timeline-detail" id="detail-2028">
+                                <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 20px; height: 100%;">
+                                    <!-- Left Column: Vision & Philanthropy -->
+                                    <div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                                        <div>
+                                            <div class="timeline-year">2028+</div>
+                                            <h3 class="timeline-title">Chapter 8: Future Vision & Purpose</h3>
+                                            <p class="timeline-text" style="font-size: 0.9rem; line-height: 1.45; color: var(--text-secondary); margin-bottom: 8px;">
+                                                Lenovo's roadmap is driven by <strong>Intelligent Transformation</strong>—transitioning into a service-led provider of smart solutions and carbon-neutral hybrid AI platforms.
+                                            </p>
+                                        </div>
+                                        <div class="card" style="padding: 10px 14px; margin: 0; background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.04);">
+                                            <h4 style="color: #fff; font-size: 0.82rem; margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
+                                                <span style="color: var(--brand-red);">■</span> Lenovo Foundation
+                                            </h4>
+                                            <p style="font-size: 0.72rem; color: var(--text-secondary); line-height: 1.35; margin: 0;">
+                                                Our philanthropic engine empowers diverse tech talents and drives STEM education and digital literacy in underprivileged communities worldwide.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Right Column: Goals & Net-Zero -->
+                                    <div style="display: flex; flex-direction: column; gap: 10px; justify-content: space-between; height: 100%;">
+                                        <!-- Revenue Goal Card -->
+                                        <div class="goal-card" style="flex: 1; padding: 12px 18px; border: 1px solid var(--border-color); border-radius: 8px; display: flex; flex-direction: column; justify-content: center; background: rgba(226,26,34,0.02); align-items: center; text-align: center;">
+                                            <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Vision 2028 Target</span>
+                                            <span style="font-size: 2.2rem; color: var(--brand-red); font-weight: 800; font-family: var(--font-heading); line-height: 1.1;">$100 B</span>
+                                            <span style="font-size: 0.7rem; color: var(--text-secondary); margin-top: 2px;">Annual revenue benchmark milestone</span>
+                                        </div>
+                                        
+                                        <!-- Net Zero Target Card -->
+                                        <div class="card" style="padding: 10px 14px; margin: 0; display: flex; flex-direction: column; gap: 4px;">
+                                            <h4 style="color: #ff8c00; font-size: 0.82rem; margin-bottom: 2px;">Net-Zero Emissions</h4>
+                                            <p style="font-size: 0.72rem; color: var(--text-secondary); line-height: 1.35; margin: 0;">
+                                                Lenovo commits to achieving <strong>Net-Zero Greenhouse Gas Emissions by 2050</strong>, validated by the Science Based Targets initiative (SBTi).
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- SLIDE 4: Products & Services -->
-                <section class="slide" id="slide-4" data-slide-index="3">
-                    <h2 class="slide-title"><span>03.</span> Products & Services Portfolio</h2>
+                <!-- SLIDE 5: Products & Services -->
+                <section class="slide" id="slide-5" data-slide-index="4">
+                    <h2 class="slide-title"><span>04.</span> Products & Services Portfolio</h2>
                     <div class="products-layout">
                         <div class="products-menu">
                             <button class="product-menu-btn active" data-category="pcs">
@@ -307,19 +445,19 @@
                                         <h3 class="product-showcase-title">Personal Computers & Laptops</h3>
                                         <p class="product-showcase-desc">Lenovo is the absolute global leader in personal computing, offering devices for business professionals, casual users, and gamers alike.</p>
                                         <div class="sub-products-grid">
-                                            <div class="sub-product-card">
+                                            <div class="sub-product-card" data-image="images/thinkpad.jpg">
                                                 <h4 class="sub-product-name">ThinkPad</h4>
                                                 <p class="sub-product-text">Famous enterprise laptops known for durability, peak keyboard design, and security.</p>
                                             </div>
-                                            <div class="sub-product-card">
+                                            <div class="sub-product-card" data-image="images/yoga.jpg">
                                                 <h4 class="sub-product-name">Yoga</h4>
                                                 <p class="sub-product-text">Premium 2-in-1 touchscreen laptops designed for content creators and flexible use.</p>
                                             </div>
-                                            <div class="sub-product-card">
+                                            <div class="sub-product-card" data-image="images/legion.jpg">
                                                 <h4 class="sub-product-name">Legion</h4>
                                                 <p class="sub-product-text">High-performance gaming laptops and desktops with advanced thermal design.</p>
                                             </div>
-                                            <div class="sub-product-card">
+                                            <div class="sub-product-card" data-image="images/ideapad.jpg">
                                                 <h4 class="sub-product-name">IdeaPad</h4>
                                                 <p class="sub-product-text">Reliable, stylish consumer laptops offering exceptional everyday value.</p>
                                             </div>
@@ -339,19 +477,19 @@
                                         <h3 class="product-showcase-title">Smartphones & Smart Devices</h3>
                                         <p class="product-showcase-desc">Expanding beyond desktops, Lenovo delivers premium mobile experiences through its Motorola division and versatile smart displays.</p>
                                         <div class="sub-products-grid">
-                                            <div class="sub-product-card">
+                                            <div class="sub-product-card" data-image="images/razr.jpg">
                                                 <h4 class="sub-product-name">Motorola Razr</h4>
                                                 <p class="sub-product-text">Modern foldable flip phones combining heritage design with next-generation OLED screens.</p>
                                             </div>
-                                            <div class="sub-product-card">
+                                            <div class="sub-product-card" data-image="images/edgephone.jpg">
                                                 <h4 class="sub-product-name">Edge Series</h4>
                                                 <p class="sub-product-text">Motorola's flagship line featuring high-end camera sensors and clean Android OS.</p>
                                             </div>
-                                            <div class="sub-product-card">
+                                            <div class="sub-product-card" data-image="images/tablet.jpg">
                                                 <h4 class="sub-product-name">Lenovo Tablets</h4>
                                                 <p class="sub-product-text">Android-based tablets optimized for entertainment, family setups, and light productivity.</p>
                                             </div>
-                                            <div class="sub-product-card">
+                                            <div class="sub-product-card" data-image="images/thinkvision.jpg">
                                                 <h4 class="sub-product-name">ThinkVision & Smart Displays</h4>
                                                 <p class="sub-product-text">Premium ergonomic monitors celebrating 20 years of color-accurate, energy-efficient engineering.</p>
                                             </div>
@@ -371,19 +509,19 @@
                                         <h3 class="product-showcase-title">Enterprise Infrastructure (ISG)</h3>
                                         <p class="product-showcase-desc">We build the infrastructure powering the modern digital economy, from on-premise compute nodes to cloud data center storage.</p>
                                         <div class="sub-products-grid">
-                                            <div class="sub-product-card">
+                                            <div class="sub-product-card" data-image="images/server.jpg">
                                                 <h4 class="sub-product-name">ThinkSystem Servers</h4>
                                                 <p class="sub-product-text">Industry-leading rack and tower servers optimized for computing density and speed.</p>
                                             </div>
-                                            <div class="sub-product-card">
+                                            <div class="sub-product-card" data-image="images/storage.jpg">
                                                 <h4 class="sub-product-name">ThinkAgile Storage</h4>
                                                 <p class="sub-product-text">Hyperconverged storage systems engineered for cloud environments and virtualization.</p>
                                             </div>
-                                            <div class="sub-product-card">
+                                            <div class="sub-product-card" data-image="images/neptune.jpg">
                                                 <h4 class="sub-product-name">AI Infrastructure</h4>
                                                 <p class="sub-product-text">Liquid-cooled GPU servers designed specifically for deep learning and high-performance computing.</p>
                                             </div>
-                                            <div class="sub-product-card">
+                                            <div class="sub-product-card" data-image="images/edgenode.jpg">
                                                 <h4 class="sub-product-name">Edge Computing</h4>
                                                 <p class="sub-product-text">Rugged micro-data centers built to process data close to where it's generated.</p>
                                             </div>
@@ -403,19 +541,19 @@
                                         <h3 class="product-showcase-title">Solutions & Services (SSG)</h3>
                                         <p class="product-showcase-desc">Transitioning to a complete solutions provider, Lenovo provides managed services, hardware support, and cloud computing subscriptions.</p>
                                         <div class="sub-products-grid">
-                                            <div class="sub-product-card">
+                                            <div class="sub-product-card" data-image="images/truscale.jpg">
                                                 <h4 class="sub-product-name">Lenovo TruScale</h4>
                                                 <p class="sub-product-text">Complete IT-as-a-Service model, allowing companies to scale hardware dynamically with zero capital overhead.</p>
                                             </div>
-                                            <div class="sub-product-card">
+                                            <div class="sub-product-card" data-image="images/support.jpg">
                                                 <h4 class="sub-product-name">Premium Care</h4>
                                                 <p class="sub-product-text">Direct, 24/7 access to advanced tech support for enterprise clients and consumers.</p>
                                             </div>
-                                            <div class="sub-product-card">
+                                            <div class="sub-product-card" data-image="images/accidental.jpg">
                                                 <h4 class="sub-product-name">Accidental Damage</h4>
                                                 <p class="sub-product-text">Protection coverage ensuring hassle-free repair or replacement for system drops and spills.</p>
                                             </div>
-                                            <div class="sub-product-card">
+                                            <div class="sub-product-card" data-image="images/workplace.jpg">
                                                 <h4 class="sub-product-name">Digital Workplace Solutions</h4>
                                                 <p class="sub-product-text">Managed security and device lifecycle programs optimized for remote-first workforces.</p>
                                             </div>
@@ -432,51 +570,63 @@
                     </div>
                 </section>
 
-                                <!-- SLIDE 5: ThinkVision 20 Years of Innovation -->
-                <section class="slide" id="slide-5" data-slide-index="4">
-                    <h2 class="slide-title"><span>04.</span> ThinkVision: 20 Years of Visual Innovation</h2>
-                    <div class="grid-2">
-                        <!-- Left Column: Specs & Engineering -->
-                        <div class="deal-key-stats">
-                            <div class="card" style="padding: 16px 20px;">
-                                <h3 style="color: #fff; margin-bottom: 8px; font-size: 1.1rem;">Engineering & Technical Excellence</h3>
-                                <p style="color: var(--text-secondary); font-size: 0.82rem; line-height: 1.45; margin-bottom: 8px;">
-                                    💡 <strong>Pioneering Ergonomics:</strong> Adjustable sleek stands with the signature red-ring clip and certified TUV Eyesafe blue-light reduction protect users over long working sessions.
-                                </p>
-                                <p style="color: var(--text-secondary); font-size: 0.82rem; line-height: 1.45; margin-bottom: 8px;">
-                                    💡 <strong>Pro-Grade Color Accuracy:</strong> Factory calibrated (Delta E &lt; 2) with 99% DCI-P3 wide color spectrums and Mini-LED backlighting make it the top choice for visual creators.
-                                </p>
-                                <p style="color: var(--text-secondary); font-size: 0.82rem; line-height: 1.45; margin: 0;">
-                                    💡 <strong>Unified Workspace (VoIP):</strong> Built-in webcams, integrated soundbar audio systems, daisy-chaining connectivity, and single-cable 100W USB-C power delivery.
-                                </p>
+                <!-- SLIDE 6: ThinkVision 20 Years of Innovation -->
+                <section class="slide" id="slide-6" data-slide-index="5">
+                    <h2 class="slide-title"><span>05.</span> ThinkVision: 20 Years of Visual Engineering</h2>
+                    
+                    <!-- Top Summary Banner -->
+                    <div class="card" style="padding: 12px 20px; margin-bottom: 16px; border-left: 4px solid var(--brand-red);">
+                        <p style="color: var(--text-primary); font-size: 0.88rem; line-height: 1.45; margin: 0;">
+                            Launched in 2003, Lenovo's <strong>ThinkVision</strong> line set the industry standard for professional desktop displays. Designed to match the reliability of ThinkPad, it represents two decades of ergonomic design, pro-grade color accuracy, and zero-compromise environmental sustainability.
+                        </p>
+                    </div>
+
+                    <div class="grid-3" style="gap: 16px; align-items: stretch;">
+                        
+                        <!-- Column 1: Display & Visual Tech -->
+                        <div class="card" style="padding: 16px 18px; display: flex; flex-direction: column; gap: 10px;">
+                            <h3 style="color: #fff; font-size: 1.05rem; display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+                                <span style="color: var(--brand-red);">■</span> Visual Precision
+                            </h3>
+                            <div style="font-size: 0.78rem; line-height: 1.4; color: var(--text-secondary); display: flex; flex-direction: column; gap: 8px;">
+                                <p><strong>Pro Color Standards:</strong> Factory-calibrated Delta E &lt; 2 accuracy with 99% DCI-P3 wide color gamuts for graphic design and media creation.</p>
+                                <p><strong>Mini-LED Technology:</strong> High-contrast screens utilizing up to 1,152 local dimming zones for deep blacks and HDR performance.</p>
                             </div>
                         </div>
 
-                        <!-- Right Column: Sustainability & Image -->
-                        <div style="display: flex; flex-direction: column; gap: 16px; height: 100%;">
-                            <div class="card" style="padding: 16px 20px;">
-                                <h3 style="color: #fff; margin-bottom: 8px; font-size: 1.1rem; text-align: center;">Green Engineering & Sustainability</h3>
-                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 0.78rem; line-height: 1.4; color: var(--text-secondary);">
-                                    <div style="border-right: 1px solid rgba(255,255,255,0.05); padding-right: 8px;">
-                                        <span style="color: var(--brand-red); font-weight: bold; display: block; margin-bottom: 4px;">Recycled Materials</span>
-                                        Built using up to 85% Post-Consumer Recycled (PCC) plastics and ocean-bound plastics.
-                                    </div>
-                                    <div>
-                                        <span style="color: #4ade80; font-weight: bold; display: block; margin-bottom: 4px;">Eco Packaging</span>
-                                        100% plastic-free, bio-degradable cushion buffers, and FSC-certified paper materials.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-img-frame" style="height: 8.5rem; overflow: hidden; border-radius: 12px; border: 1px solid var(--border-color);">
-                                <img src="images/thinkvision.jpg" alt="Lenovo ThinkVision Monitor Showcase" style="width: 100%; height: 100%; object-fit: cover;">
+                        <!-- Column 2: Ergonomics & Workspace -->
+                        <div class="card" style="padding: 16px 18px; display: flex; flex-direction: column; gap: 10px;">
+                            <h3 style="color: #fff; font-size: 1.05rem; display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+                                <span style="color: var(--brand-red);">■</span> User Wellness & VoIP
+                            </h3>
+                            <div style="font-size: 0.78rem; line-height: 1.4; color: var(--text-secondary); display: flex; flex-direction: column; gap: 8px;">
+                                <p><strong>Ergonomic Stand:</strong> Signature red-clip stand with height, tilt, swivel, and pivot adjustments for comfort.</p>
+                                <p><strong>TUV Eyesafe:</strong> Natural low blue-light hardware filters protect eyes from fatigue without yellowing the screen display colors.</p>
+                                <p><strong>Smart VoIP:</strong> Integrated webcams with privacy shutters and single-cable 100W USB-C docking power delivery.</p>
                             </div>
                         </div>
+
+                        <!-- Column 3: Green Engineering & Graphic -->
+                        <div style="display: flex; flex-direction: column; gap: 16px;">
+                            <div class="card" style="padding: 14px 16px; flex: 1;">
+                                <h3 style="color: #fff; font-size: 1.05rem; display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                                    <span style="color: #4ade80;">■</span> Green Engineering
+                                </h3>
+                                <p style="font-size: 0.78rem; line-height: 1.4; color: var(--text-secondary); margin: 0;">
+                                    Built with up to 85% Post-Consumer Recycled (PCC) plastics. Packaged in 100% plastic-free, bio-degradable FSC paper buffers with Carbon Offset services.
+                                </p>
+                            </div>
+                            <div class="product-img-frame" style="height: 105px; overflow: hidden; border-radius: 12px; border: 1px solid var(--border-color);">
+                                <img src="images/thinkvision.jpg" alt="ThinkVision Monitor Showcase" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+
                     </div>
                 </section>
 
-<!-- SLIDE 6: Competitor Analysis -->
-                <section class="slide" id="slide-6" data-slide-index="5">
-                    <h2 class="slide-title"><span>05.</span> Competitor Analysis: Global & Local Dynamics</h2>
+<!-- SLIDE 7: Competitor Analysis -->
+                <section class="slide" id="slide-7" data-slide-index="6">
+                    <h2 class="slide-title"><span>06.</span> Competitor Analysis: Global & Local Dynamics</h2>
                     <div class="grid-2">
                         <!-- Left Column: Competitor Markets Info -->
                         <div class="deal-key-stats">
@@ -533,138 +683,120 @@
                                 <img src="images/rivals.jpg" alt="Competitor Battle Layout" style="width: 100%; height: 100%; object-fit: cover;">
                             </div>
                         </div>
-                    </div>
                 </section>
 
-                <!-- SLIDE 7: Financial Performance -->
-                <section class="slide" id="slide-7" data-slide-index="6">
-                    <h2 class="slide-title"><span>06.</span> Financial Performance (FY 2026)</h2>
+                <!-- SLIDE 8: Financial Performance -->
+                <section class="slide" id="slide-8" data-slide-index="7">
+                    <h2 class="slide-title"><span>07.</span> Financial Performance (FY 2026)</h2>
                     <div class="financials-grid">
-                        <div class="financials-stats">
-                            <div class="fin-stat-card">
-                                <div class="fin-stat-info">
-                                    <h4>Annual Revenue</h4>
-                                    <div class="value">$83.1 B</div>
+                        
+                        <!-- Left Column: 5-Year Revenue Trend Flow -->
+                        <div class="fin-chart-panel">
+                            <h3 class="chart-title" style="margin-bottom: 20px;">5-Year Revenue Growth Trend (USD Billions)</h3>
+                            <div class="chart-container" style="flex: 1; display: flex; align-items: flex-end; justify-content: space-around; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <!-- FY22 -->
+                                <div class="chart-bar-wrapper">
+                                    <div class="chart-bar-outer">
+                                        <div class="chart-bar-inner prev-year" data-percentage="71.6">
+                                            <div class="chart-bar-value">$71.6B</div>
+                                        </div>
+                                    </div>
+                                    <span class="chart-bar-label">FY22</span>
                                 </div>
-                                <div class="fin-stat-badge">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                                <!-- FY23 -->
+                                <div class="chart-bar-wrapper">
+                                    <div class="chart-bar-outer">
+                                        <div class="chart-bar-inner prev-year" data-percentage="62.0">
+                                            <div class="chart-bar-value">$62.0B</div>
+                                        </div>
+                                    </div>
+                                    <span class="chart-bar-label">FY23</span>
+                                </div>
+                                <!-- FY24 -->
+                                <div class="chart-bar-wrapper">
+                                    <div class="chart-bar-outer">
+                                        <div class="chart-bar-inner prev-year" data-percentage="56.9">
+                                            <div class="chart-bar-value">$56.9B</div>
+                                        </div>
+                                    </div>
+                                    <span class="chart-bar-label">FY24</span>
+                                </div>
+                                <!-- FY25 -->
+                                <div class="chart-bar-wrapper">
+                                    <div class="chart-bar-outer">
+                                        <div class="chart-bar-inner prev-year" data-percentage="69.8">
+                                            <div class="chart-bar-value">$69.8B</div>
+                                        </div>
+                                    </div>
+                                    <span class="chart-bar-label">FY25</span>
+                                </div>
+                                <!-- FY26 (Peak) -->
+                                <div class="chart-bar-wrapper">
+                                    <div class="chart-bar-outer">
+                                        <div class="chart-bar-inner current-peak" data-percentage="83.1">
+                                            <div class="chart-bar-value" style="color: var(--brand-red); font-weight: 800;">$83.1B</div>
+                                        </div>
+                                    </div>
+                                    <span class="chart-bar-label" style="color: var(--brand-red); font-weight: 700;">FY26</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Key Metrics (Easy to explain) -->
+                        <div class="financials-stats" style="display: flex; flex-direction: column; gap: 8px; justify-content: center; height: 100%;">
+                            <!-- Metric 1 -->
+                            <div class="fin-stat-card" style="padding: 10px 18px;">
+                                <div class="fin-stat-info">
+                                    <h4 style="margin-bottom: 2px; font-size: 0.82rem;">Record Group Revenue</h4>
+                                    <div class="value" style="font-size: 1.6rem; font-weight: 800; color: #fff;">$83.1 B</div>
+                                    <p style="font-size: 0.68rem; color: var(--text-muted); margin: 0; line-height: 1.25;">Record high driven by AI data centers & enterprise PC demand recovery.</p>
+                                </div>
+                                <div class="fin-stat-badge" style="font-size: 0.75rem; padding: 4px 10px;">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
                                     +20% YoY
                                 </div>
                             </div>
-                            <div class="fin-stat-card">
+                            <!-- Metric 2 -->
+                            <div class="fin-stat-card" style="padding: 10px 18px;">
                                 <div class="fin-stat-info">
-                                    <h4>Net Income</h4>
-                                    <div class="value">$1.9 B</div>
+                                    <h4 style="margin-bottom: 2px; font-size: 0.82rem;">Net Income Growth</h4>
+                                    <div class="value" style="font-size: 1.6rem; font-weight: 800; color: #fff;">$1.9 B</div>
+                                    <p style="font-size: 0.68rem; color: var(--text-muted); margin: 0; line-height: 1.25;">Surged 38% reflecting strong operating efficiency & services margin expansion.</p>
                                 </div>
-                                <div class="fin-stat-badge">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                                <div class="fin-stat-badge" style="font-size: 0.75rem; padding: 4px 10px;">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
                                     +38% YoY
                                 </div>
                             </div>
-                            <div class="fin-stat-card">
+                            <!-- Metric 3 -->
+                            <div class="fin-stat-card" style="padding: 10px 18px;">
                                 <div class="fin-stat-info">
-                                    <h4>AI Infrastructure Share</h4>
-                                    <div class="value">33%</div>
+                                    <h4 style="margin-bottom: 2px; font-size: 0.82rem;">AI Revenue Contribution</h4>
+                                    <div class="value" style="font-size: 1.6rem; font-weight: 800; color: #fff;">33%</div>
+                                    <p style="font-size: 0.68rem; color: var(--text-muted); margin: 0; line-height: 1.25;">1 in 3 systems shipped incorporates native hardware NPU AI engines.</p>
                                 </div>
-                                <div class="fin-stat-badge">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                                <div class="fin-stat-badge" style="background: rgba(74, 222, 128, 0.1); color: #4ade80; border-color: rgba(74, 222, 128, 0.2); font-size: 0.75rem; padding: 4px 10px;">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
                                     2x YoY
                                 </div>
                             </div>
-                        </div>
-                        <div class="fin-chart-panel">
-                            <h3 class="chart-title">Key Performance Indicators Growth</h3>
-                            <div class="chart-container">
-                                <div class="chart-bar-wrapper">
-                                    <div class="chart-bar-outer">
-                                        <div class="chart-bar-inner" data-percentage="83.1">
-                                            <div class="chart-bar-value">$83.1B</div>
-                                        </div>
-                                    </div>
-                                    <span class="chart-bar-label">Revenue</span>
+                            <!-- Metric 4: Vision 2028 -->
+                            <div class="fin-stat-card" style="padding: 10px 18px; background: linear-gradient(135deg, rgba(226, 26, 34, 0.08) 0%, rgba(12, 12, 20, 0.8) 100%); border-color: rgba(226, 26, 34, 0.25);">
+                                <div class="fin-stat-info">
+                                    <h4 style="margin-bottom: 2px; font-size: 0.82rem; color: var(--brand-red);">Vision 2028 Target</h4>
+                                    <div class="value" style="font-size: 1.6rem; font-weight: 800; color: #fff;">$100.0 B</div>
+                                    <p style="font-size: 0.68rem; color: var(--text-muted); margin: 0; line-height: 1.25;">Strategic target to cross the $100 Billion revenue mark through services scale.</p>
                                 </div>
-                                <div class="chart-bar-wrapper">
-                                    <div class="chart-bar-outer">
-                                        <div class="chart-bar-inner" data-percentage="33">
-                                            <div class="chart-bar-value">33%</div>
-                                        </div>
-                                    </div>
-                                    <span class="chart-bar-label">AI Revenue</span>
-                                </div>
-                                <div class="chart-bar-wrapper">
-                                    <div class="chart-bar-outer">
-                                        <div class="chart-bar-inner" data-percentage="24.4">
-                                            <div class="chart-bar-value">24.4%</div>
-                                        </div>
-                                    </div>
-                                    <span class="chart-bar-label">PC Share</span>
-                                </div>
-                                <div class="chart-bar-wrapper">
-                                    <div class="chart-bar-outer">
-                                        <div class="chart-bar-inner" data-percentage="19.2">
-                                            <div class="chart-bar-value">$19.2B</div>
-                                        </div>
-                                    </div>
-                                    <span class="chart-bar-label">ISG Rev</span>
+                                <div class="fin-stat-badge" style="background: rgba(226, 26, 34, 0.1); color: var(--brand-red); border-color: rgba(226, 26, 34, 0.25); font-size: 0.75rem; padding: 4px 10px;">
+                                    Outlook
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </section>
 
-                <!-- SLIDE 8: Global Presence -->
-                <section class="slide" id="slide-8" data-slide-index="7">
-                    <h2 class="slide-title"><span>07.</span> Global Footprint & Operations</h2>
-                    <div class="map-layout">
-                        <div class="map-visualization">
-                            <!-- Premium Colorful Stylized World Map -->
-                            <img src="images/worldmap.png" alt="Lenovo Global Operations Map" class="world-map-image">
-                            <!-- Interactive Pins -->
-                            <div class="map-pin" id="pin-morrisville" data-hub="morrisville">
-                                <div class="pin-dot"></div>
-                                <div class="pin-pulse"></div>
-                                <span class="pin-label">Morrisville (US)</span>
-                            </div>
-                            <div class="map-pin" id="pin-beijing" data-hub="beijing">
-                                <div class="pin-dot"></div>
-                                <div class="pin-pulse"></div>
-                                <span class="pin-label">Beijing (CN)</span>
-                            </div>
-                            <div class="map-pin" id="pin-stuttgart" data-hub="stuttgart">
-                                <div class="pin-dot"></div>
-                                <div class="pin-pulse"></div>
-                                <span class="pin-label">Stuttgart (DE)</span>
-                            </div>
-                            <div class="map-pin" id="pin-singapore" data-hub="singapore">
-                                <div class="pin-dot"></div>
-                                <div class="pin-pulse"></div>
-                                <span class="pin-label">Singapore</span>
-                            </div>
-                            <div class="map-pin" id="pin-yamato" data-hub="yamato">
-                                <div class="pin-dot"></div>
-                                <div class="pin-pulse"></div>
-                                <span class="pin-label">Yamato (JP)</span>
-                            </div>
-                        </div>
-                        <div class="map-info-card" id="map-info-panel">
-                            <h3 class="map-hub-name" id="hub-title">Morrisville Hub</h3>
-                            <span class="map-hub-region" id="hub-region">USA</span>
-                            
-                            <div class="map-hub-detail-row">
-                                <span class="map-hub-detail-label">Key Focus</span>
-                                <span class="map-hub-detail-val" id="hub-focus">Global Corporate HQ & R&D</span>
-                            </div>
-                            <div class="map-hub-detail-row">
-                                <span class="map-hub-detail-label">Significance</span>
-                                <span class="map-hub-detail-val" id="hub-sig">Center of US PC operations & logistics</span>
-                            </div>
-                            <div class="map-hub-detail-row">
-                                <span class="map-hub-detail-label">Staff Footprint</span>
-                                <span class="map-hub-detail-val" id="hub-staff">Core Leadership Team</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                
 
                 <!-- SLIDE 9: FIFA World Cup 2026 Partnership -->
                 <section class="slide" id="slide-9" data-slide-index="8">
@@ -674,16 +806,16 @@
                             <div class="card">
                                 <h3 style="margin-bottom: 12px; color: #fff;">Global Technology Partner</h3>
                                 <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 12px;">
-                                    Lenovo has signed a historic deal to become the <strong>Official FIFA Technology Partner</strong> for the upcoming FIFA World Cup 2026 in the USA, Canada, and Mexico.
+                                    Lenovo successfully served as the <strong>Official FIFA Technology Partner</strong> for the historic FIFA World Cup 2026, which spanned across the USA, Canada, and Mexico.
                                 </p>
                                 <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
-                                    This represents Lenovo's commitment to integration in massive global entertainment environments, bringing intelligence to sports analytics.
+                                    This marked Lenovo's largest sports technology deployment, bringing unified data services and real-time processing to global sports entertainment.
                                 </p>
                             </div>
                             <div class="card">
-                                <h3 style="margin-bottom: 8px; color: #fff;">The Tech Integration</h3>
-                                <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5; margin-bottom: 6px;">💡 <strong>AI & Analytics:</strong> Real-time match data telemetry and player performance tracking.</p>
-                                <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5;">💡 <strong>Infrastructure:</strong> Lenovo ThinkSystem edge servers powering local stadium computations.</p>
+                                <h3 style="margin-bottom: 8px; color: #fff;">Tech Integration Milestones</h3>
+                                <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5; margin-bottom: 6px;">💡 <strong>AI & Analytics:</strong> Powered real-time match telemetry, player tracking, and data graphics for global broadcasts.</p>
+                                <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5;">💡 <strong>Infrastructure:</strong> Lenovo ThinkSystem edge servers powered stadium-level computations across all 104 matches.</p>
                             </div>
                         </div>
                         <div class="product-image-col">
@@ -727,10 +859,10 @@
                         <div class="deal-key-stats" style="gap: 12px;">
                             <!-- Card 1: Logo & Info -->
                             <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
-                                <div style="width: 100%; height: 80px; padding: 5px 15px; display: flex; align-items: center; justify-content: space-around; background: rgba(255, 255, 255, 0.03); border-bottom: 1px solid var(--border-color); position: relative;">
-                                    <img src="images/mplogo.png" alt="Muller & Phipps Logo" style="max-width: 42%; max-height: 80%; object-fit: contain;">
-                                    <div style="width: 1px; height: 35px; background: rgba(255, 255, 255, 0.1);"></div>
-                                    <img src="images/siratlogo.png" alt="Tech Sirat Logo" style="max-width: 42%; max-height: 80%; object-fit: contain;">
+                                <div style="width: 100%; height: 85px; padding: 10px 20px; display: flex; align-items: center; justify-content: space-around; background: #ffffff; border-bottom: 1px solid var(--border-color); position: relative;">
+                                    <img src="images/mplogo.png" alt="Muller & Phipps Logo" style="max-width: 42%; max-height: 90%; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));">
+                                    <div style="width: 1px; height: 40px; background: rgba(0, 0, 0, 0.15);"></div>
+                                    <img src="images/siratlogo.png" alt="Tech Sirat Logo" style="max-width: 42%; max-height: 90%; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));">
                                 </div>
                                 <div style="padding: 10px 16px;">
                                     <h3 style="margin-bottom: 4px; color: #fff; font-size: 0.95rem;">Who are M&P & Tech Sirat?</h3>
@@ -821,29 +953,47 @@
                                 <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 12px; text-align: center;">Pakistan Lenovo Market Share</h3>
                                 
                                 <!-- Mini Vertical Bar Chart -->
-                                <div style="display: flex; justify-content: space-around; align-items: flex-end; height: 110px; margin-bottom: 8px; padding: 0 10px;">
-                                    <div style="display: flex; flex-direction: column; align-items: center; width: 95px;">
-                                        <span style="font-size: 0.85rem; color: var(--brand-red); font-weight: 700; margin-bottom: 4px;">45%</span>
+                                <div style="display: flex; justify-content: space-around; align-items: flex-end; height: 110px; margin-bottom: 8px; padding: 0 5px;">
+                                    <div style="display: flex; flex-direction: column; align-items: center; width: 85px;">
+                                        <span style="font-size: 0.85rem; color: var(--brand-red); font-weight: 700; margin-bottom: 4px;">30%</span>
                                         <div style="width: 26px; height: 60px; background: rgba(255,255,255,0.02); border-radius: 4px; position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,0.05);">
                                             <div class="pk-bar-inner-mp" style="position: absolute; bottom: 0; left: 0; width: 100%; background: var(--brand-red); box-shadow: 0 0 10px rgba(226, 26, 34, 0.4); border-radius: 2px;"></div>
                                         </div>
-                                        <span style="font-size: 0.7rem; color: var(--text-secondary); margin-top: 4px; text-align: center; font-weight: 600; line-height: 1.1;">Authorized M&P</span>
+                                        <span style="font-size: 0.68rem; color: var(--text-secondary); margin-top: 4px; text-align: center; font-weight: 600; line-height: 1.1;">M&P Share</span>
                                     </div>
-                                    <div style="display: flex; flex-direction: column; align-items: center; width: 95px;">
+                                    <div style="display: flex; flex-direction: column; align-items: center; width: 85px;">
+                                        <span style="font-size: 0.85rem; color: #ff6b6b; font-weight: 700; margin-bottom: 4px;">15%</span>
+                                        <div style="width: 26px; height: 60px; background: rgba(255,255,255,0.02); border-radius: 4px; position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,0.05);">
+                                            <div class="pk-bar-inner-others" style="position: absolute; bottom: 0; left: 0; width: 100%; background: linear-gradient(180deg, #ff8e8e 0%, #ff5252 100%); box-shadow: 0 0 10px rgba(255, 107, 107, 0.3); border-radius: 2px;"></div>
+                                        </div>
+                                        <span style="font-size: 0.68rem; color: var(--text-secondary); margin-top: 4px; text-align: center; font-weight: 600; line-height: 1.1;">Other Official</span>
+                                    </div>
+                                    <div style="display: flex; flex-direction: column; align-items: center; width: 85px;">
                                         <span style="font-size: 0.85rem; color: #888; font-weight: 700; margin-bottom: 4px;">55%</span>
                                         <div style="width: 26px; height: 60px; background: rgba(255,255,255,0.02); border-radius: 4px; position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,0.05);">
                                             <div class="pk-bar-inner-grey" style="position: absolute; bottom: 0; left: 0; width: 100%; background: #444; border-radius: 2px;"></div>
                                         </div>
-                                        <span style="font-size: 0.7rem; color: var(--text-secondary); margin-top: 4px; text-align: center; font-weight: 600; line-height: 1.1;">Grey Market</span>
+                                        <span style="font-size: 0.68rem; color: var(--text-secondary); margin-top: 4px; text-align: center; font-weight: 600; line-height: 1.1;">Grey Market</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card" style="padding: 16px 20px;">
-                                <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 6px;">M&P Revenue Drivers</h3>
-                                <p style="color: var(--text-secondary); font-size: 0.82rem; line-height: 1.4; margin: 0;">
-                                    💡 <strong>B2B Enterprise Contracts:</strong> Dominates corporate bank deals, multinationals, and educational institutions (over 65% of M&P tech revenue).<br>
-                                    💡 <strong>Reseller Tenders:</strong> Steady growth in governmental infrastructure supplies.
+                            <div class="card" style="padding: 14px 18px; margin-bottom: 0;">
+                                <h3 style="color: #fff; font-size: 1.02rem; margin-bottom: 6px;">M&P Revenue Drivers</h3>
+                                <p style="color: var(--text-secondary); font-size: 0.8rem; line-height: 1.35; margin: 0;">
+                                    💡 <strong>B2B Enterprise:</strong> Dominates bank deals, multinationals, and schools (65% of revenue).<br>
+                                    💡 <strong>Reseller Tenders:</strong> Steady growth in public sector infrastructure.
                                 </p>
+                            </div>
+                            <div class="card" style="padding: 12px 18px; margin-top: 10px;">
+                                <h3 style="color: #fff; font-size: 0.95rem; margin-bottom: 6px;">Other Authorized Distributors</h3>
+                                <p style="color: var(--text-secondary); font-size: 0.76rem; line-height: 1.35; margin: 0;">
+                                    In addition to M&P, other official channels providing authorized Lenovo hardware & warranties in Pakistan include:
+                                </p>
+                                <div style="display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap;">
+                                    <span style="font-size: 0.72rem; padding: 4px 8px; background: rgba(255, 26, 34, 0.05); border: 1px solid rgba(226, 26, 34, 0.15); border-radius: 4px; color: #fff; font-weight: 500;">JOSS Computers</span>
+                                    <span style="font-size: 0.72rem; padding: 4px 8px; background: rgba(255, 26, 34, 0.05); border: 1px solid rgba(226, 26, 34, 0.15); border-radius: 4px; color: #fff; font-weight: 500;">Unique Technologies</span>
+                                    <span style="font-size: 0.72rem; padding: 4px 8px; background: rgba(255, 26, 34, 0.05); border: 1px solid rgba(226, 26, 34, 0.15); border-radius: 4px; color: #fff; font-weight: 500;">HCom Distributors</span>
+                                </div>
                             </div>
                         </div>
 
@@ -890,28 +1040,20 @@
                     </div>
                 </section>
 
-                <!-- SLIDE 13: Conclusion -->
+                <!-- SLIDE 13: Thank You -->
                 <section class="slide" id="slide-13" data-slide-index="12">
-                    <h2 class="slide-title"><span>12.</span> Sustainability & Vision</h2>
-                    <div class="conclusion-grid">
-                        <div class="vision-card">
-                            <h3>Corporate Vision</h3>
-                            <p class="vision-text">"Intelligent Transformation" — driving the shift to a highly integrated ecosystem of smart devices, carbon-neutral server nodes, and device-centric hybrid AI software platforms.</p>
-                            <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.05);">
-                                <h4 style="color: var(--brand-red); margin-bottom: 6px;">Sustainability Targets</h4>
-                                <p style="color: var(--text-secondary); font-size: 0.95rem;">Lenovo commits to achieving <strong>Net-Zero Greenhouse Gas Emissions by 2050</strong> with validations from Science Based Targets initiative (SBTi).</p>
-                            </div>
+                    <div class="slide-title-screen" style="height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative;">
+                        <div class="title-badge" style="letter-spacing: 0.25em;">Presentation Conclusion</div>
+                        <div class="lenovo-logo-container" style="font-size: 5.5rem; letter-spacing: 0.08em; line-height: 1; margin: 15px 0;">
+                            <span style="background: linear-gradient(90deg, #fff 0%, rgba(255,255,255,0.8) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">THANK YOU</span>
                         </div>
-                        <div class="deal-key-stats">
-                            <div class="goal-card">
-                                <div class="goal-label">Revenue Projection</div>
-                                <div class="goal-value">$100 B</div>
-                                <div class="goal-desc">Target annual revenue milestone by 2028</div>
-                            </div>
-                            <div class="card" style="padding: 20px;">
-                                <h4 style="color: #fff; margin-bottom: 8px;">Lenovo Foundation</h4>
-                                <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.4;">Philanthropic engine focusing on STEM education empowerment, supporting digital literacy in underprivileged communities, and supporting diverse workplace talents globally.</p>
-                            </div>
+                        <h1 class="main-title" style="font-size: 2.2rem; color: var(--brand-red); margin-bottom: 12px; font-weight: 800; text-shadow: 0 0 15px rgba(226, 26, 34, 0.4);">Smarter Technology for All</h1>
+                        <p class="subtitle" style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 30px;">Empowering business ecosystems and digital transformations across Pakistan</p>
+                        
+                        <div style="display: flex; gap: 24px; margin-top: 10px; font-size: 0.88rem; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px;">
+                            <span>🌐 <a href="https://www.lenovo.com/pk" target="_blank" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">lenovo.com/pk</a></span>
+                            <span style="color: rgba(255,255,255,0.1);">|</span>
+                            <span>💼 <a href="https://www.lenovopartnerhub.com" target="_blank" style="color: var(--text-secondary); text-decoration: none; font-weight: 500;">Partner Hub Portal</a></span>
                         </div>
                     </div>
                 </section>
@@ -923,7 +1065,10 @@
                 <div class="slide-number-indicator">
                     SLIDE <span id="current-slide-num">1</span> OF <span id="total-slides-num">13</span>
                 </div>
-                <div class="controls-buttons">
+                <div class="controls-buttons" style="align-items: center;">
+                    <div style="font-size: 0.78rem; color: var(--text-muted); margin-right: 12px; font-weight: 500; display: flex; align-items: center; gap: 6px;">
+                        <span>⌨️ Use Left/Right Arrows, Spacebar, or Clicker to navigate</span>
+                    </div>
                     <button class="control-btn" id="btn-prev" title="Previous Slide">
                         <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
                     </button>

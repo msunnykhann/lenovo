@@ -18,20 +18,8 @@ const presenterNotes = [
         <li>Highlight scale: 180+ markets, 72K employees, and 30+ manufacturing hubs.</li>
     </ul>`,
     
-    // Slide 3 (Global Map)
-    `<strong>Slide 3: Global Footprint & Hubs</strong>
-    <ul>
-        <li>Explain that Lenovo relies on a decentralized, resilient global supply chain.</li>
-        <li>Point out the key hubs on the map:</li>
-        <li><strong>Morrisville:</strong> US PC Operations, corporate leadership, and logistics hub.</li>
-        <li><strong>Beijing:</strong> Global manufacturing oversight and APAC corporate operations.</li>
-        <li><strong>Stuttgart:</strong> EMEA regional control and enterprise deployment.</li>
-        <li><strong>Singapore:</strong> Core financial hub and sales gateway for Southeast Asia.</li>
-        <li><strong>Yamato (Japan):</strong> The famous engineering laboratory where the ThinkPad is designed and stress-tested.</li>
-    </ul>`,
-    
-    // Slide 4 (History Timeline)
-    `<strong>Slide 4: The Lenovo Odyssey (Timeline)</strong>
+    // Slide 3 (History Timeline)
+    `<strong>Slide 3: The Lenovo Odyssey (Timeline)</strong>
     <ul>
         <li>Frame this slide as a chronological story with 8 distinct chapters:</li>
         <li><strong>Ch 1 (1984):</strong> Detail the humble guardhouse origins in Beijing and the name 'Legend'.</li>
@@ -42,6 +30,18 @@ const presenterNotes = [
         <li><strong>Ch 6 (2020):</strong> Released the Yoga 5G, merging laptops with high-speed cellular capability.</li>
         <li><strong>Ch 7 (2026):</strong> Emphasize the pivot into the Hybrid AI era with historic $83.1B in revenues.</li>
         <li><strong>Ch 8 (2028+):</strong> Future vision. Highlights Intelligent Transformation, Net-Zero emissions target by 2050 (validated by SBTi), and the Vision 2028 $100 Billion revenue target. Mention the Lenovo Foundation's STEM programs.</li>
+    </ul>`,
+    
+    // Slide 4 (Global Map)
+    `<strong>Slide 4: Global Footprint & Hubs</strong>
+    <ul>
+        <li>Explain that Lenovo relies on a decentralized, resilient global supply chain.</li>
+        <li>Point out the key hubs on the map:</li>
+        <li><strong>Morrisville:</strong> US PC Operations, corporate leadership, and logistics hub.</li>
+        <li><strong>Beijing:</strong> Global manufacturing oversight and APAC corporate operations.</li>
+        <li><strong>Stuttgart:</strong> EMEA regional control and enterprise deployment.</li>
+        <li><strong>Singapore:</strong> Core financial hub and sales gateway for Southeast Asia.</li>
+        <li><strong>Yamato (Japan):</strong> The famous engineering laboratory where the ThinkPad is designed and stress-tested.</li>
     </ul>`,
     
     // Slide 5 (Products)

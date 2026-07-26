@@ -1046,7 +1046,7 @@ h1, h2, h3, h4 {
     border: 1px solid var(--border-color);
     background: rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 0;
     height: 23rem;
     display: flex;
     align-items: center;
@@ -1096,21 +1096,25 @@ h1, h2, h3, h4 {
 
 .pin-label {
     position: absolute;
-    bottom: 22px;
+    bottom: 24px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(12, 12, 20, 0.9);
-    border: 1px solid var(--border-color);
-    color: var(--text-secondary);
-    padding: 4px 10px;
+    background: rgba(0, 0, 0, 0.85);
+    border: 1px solid rgba(226, 26, 34, 0.5);
+    color: #fff;
+    padding: 5px 12px;
     border-radius: 6px;
-    font-size: 0.68rem;
+    font-size: 0.72rem;
     font-family: var(--font-heading);
     font-weight: 600;
     white-space: nowrap;
-    pointer-events: none;
-    opacity: 0.6;
+    pointer-events: auto;
+    cursor: pointer;
+    opacity: 1;
     transition: var(--transition-smooth);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    z-index: 10;
 }
 
 /* Vertical indicator line pointing from label down to the map pin dot */
@@ -1211,12 +1215,12 @@ h1, h2, h3, h4 {
     font-size: 0.95rem;
 }
 
-/* Pin coordinates on visual */
-#pin-morrisville { top: 38%; left: 21.0%; }
-#pin-beijing { top: 38%; left: 74.0%; }
-#pin-stuttgart { top: 34%; left: 51.5%; }
-#pin-singapore { top: 59.0%; left: 74.5%; }
-#pin-yamato { top: 37%; left: 81.5%; }
+/* Pin coordinates on visual (no-padding aligned to map image) */
+#pin-morrisville { top: 34%; left: 28.0%; }
+#pin-beijing { top: 40%; left: 78.0%; }
+#pin-stuttgart { top: 25%; left: 53.5%; }
+#pin-singapore { top: 63%; left: 74.0%; }
+#pin-yamato { top: 29%; left: 85.5%; }
 
 /* ----------------------------------------------------
    SLIDE 8: CONCLUSION

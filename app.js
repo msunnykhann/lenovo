@@ -54,18 +54,8 @@ const presenterNotes = [
         <li><strong>Services (SSG):</strong> TruScale (flexible pay-as-you-go IT infrastructure) and Premium Care.</li>
     </ul>`,
     
-    // Slide 6 (ThinkVision)
-    `<strong>Slide 6: ThinkVision 20 Years of Innovation</strong>
-    <ul>
-        <li>State the milestone: Celebrates 20 years (since 2003) as the premier desktop partner to ThinkPad.</li>
-        <li><strong>Explain Pillar 1 - Visual Precision:</strong> Factory color calibration (Delta E &lt; 2) with 99% DCI-P3 wide color gamut. Up to 1152-zone Mini-LED screens for high contrast HDR.</li>
-        <li><strong>Explain Pillar 2 - User Wellness:</strong> Signature red stand clip, full tilt/pivot/height ergonomics, and hardware-based TUV Eyesafe reducing fatigue without yellow screen shifts.</li>
-        <li><strong>Explain Pillar 3 - Smart VoIP Workspaces:</strong> Integrated webcams, soundbars, daisy-chaining, and single-cable 100W USB-C docking power delivery.</li>
-        <li><strong>Explain Pillar 4 - Green Engineering:</strong> Made of 85% Post-Consumer Recycled (PCC) plastics, 100% plastic-free biodegradable buffers, and Carbon Offset lifestyle services.</li>
-    </ul>`,
-    
-    // Slide 7 (Competitor)
-    `<strong>Slide 7: Competitor Analysis</strong>
+    // Slide 6 (Competitor)
+    `<strong>Slide 6: Competitor Analysis</strong>
     <ul>
         <li>Analyze the competitive landscape globally and locally in Pakistan.</li>
         <li><strong>Global:</strong> Lenovo leads the global PC market at 24.4%, with HP (~20%) and Dell (~16%) as main rivals.</li>
@@ -73,8 +63,25 @@ const presenterNotes = [
         <li><strong>Segments:</strong> Lenovo's Legion dominates local high-end gaming demand due to cooling; ThinkPad goes head-to-head with HP EliteBook in corporate deals.</li>
     </ul>`,
     
-    // Slide 8 (Financials)
-    `<strong>Slide 8: Financial Performance (5-Year Trend & Vision 2028)</strong>
+    // Slide 7 (AI PC)
+    `<strong>Slide 7: AI PC & Hybrid AI Strategy</strong>
+    <ul>
+        <li>Explain the "AI for All" hybrid AI vision: combining public cloud speed with private on-device security.</li>
+        <li><strong>Hardware:</strong> Next-generation devices shipping with dedicated Neural Processing Units (NPUs).</li>
+        <li><strong>Data Centers:</strong> Lenovo Neptune direct liquid-cooling technology reduces server energy consumption by up to 40%.</li>
+    </ul>`,
+
+    // Slide 8 (FIFA)
+    `<strong>Slide 8: FIFA World Cup 2026 Partnership (Post-Event Success)</strong>
+    <ul>
+        <li>Explain that since the World Cup has successfully concluded, we can talk about Lenovo's flawless execution.</li>
+        <li>Lenovo acted as the <strong>Official FIFA Technology Partner</strong> across the USA, Canada, and Mexico.</li>
+        <li>Detail the deployment scale: Powered real-time player telemetry, ball tracking analytics, and data graphics.</li>
+        <li>Emphasize that Lenovo ThinkSystem edge servers successfully powered computing tasks inside all stadiums across all 104 matches without any downtime.</li>
+    </ul>`,
+    
+    // Slide 9 (Financials)
+    `<strong>Slide 9: Financial Performance (5-Year Trend & Vision 2028)</strong>
     <ul>
         <li><strong>Explain the 5-Year Revenue Curve:</strong> Walk the audience through the trend:</li>
         <li><strong>FY22 ($71.6B):</strong> Post-pandemic peak demand.</li>
@@ -84,25 +91,8 @@ const presenterNotes = [
         <li><strong>Vision 2028:</strong> Highlight the forward-looking roadmap to reach <strong>$100 Billion</strong> in annual revenue by 2028, driven by hybrid AI infrastructure, Neptune cooling systems, and solutions expansion.</li>
     </ul>`,
 
-    // Slide 9 (FIFA)
-    `<strong>Slide 9: FIFA World Cup 2026 Partnership (Post-Event Success)</strong>
-    <ul>
-        <li>Explain that since the World Cup has successfully concluded, we can talk about Lenovo's flawless execution.</li>
-        <li>Lenovo acted as the <strong>Official FIFA Technology Partner</strong> across the USA, Canada, and Mexico.</li>
-        <li>Detail the deployment scale: Powered real-time player telemetry, ball tracking analytics, and data graphics.</li>
-        <li>Emphasize that Lenovo ThinkSystem edge servers successfully powered computing tasks inside all stadiums across all 104 matches without any downtime.</li>
-    </ul>`,
-
-    // Slide 10 (AI PC)
-    `<strong>Slide 10: AI PC & Hybrid AI Strategy</strong>
-    <ul>
-        <li>Explain the "AI for All" hybrid AI vision: combining public cloud speed with private on-device security.</li>
-        <li><strong>Hardware:</strong> Next-generation devices shipping with dedicated Neural Processing Units (NPUs).</li>
-        <li><strong>Data Centers:</strong> Lenovo Neptune direct liquid-cooling technology reduces server energy consumption by up to 40%.</li>
-    </ul>`,
-
-    // Slide 11 (M&P Distribution)
-    `<strong>Slide 11: Lenovo & M&P Distribution (Pakistan)</strong>
+    // Slide 10 (M&P Distribution)
+    `<strong>Slide 10: Lenovo & M&P Distribution (Pakistan)</strong>
     <ul>
         <li>Introduce Muller & Phipps (M&P) as the official authorized distributor for Lenovo in Pakistan.</li>
         <li>Logistics and reseller dealer networks are managed via M&P's tech arm, Tech Sirat (acquired in 2016).</li>
@@ -110,8 +100,8 @@ const presenterNotes = [
         <li>Explain the official warranty benefit: 1-2 years direct local manufacturer warranty on authorized imports.</li>
     </ul>`,
 
-    // Slide 12 (Grey Market)
-    `<strong>Slide 12: M&P vs. Grey Market Dynamics</strong>
+    // Slide 11 (Grey Market)
+    `<strong>Slide 11: M&P vs. Grey Market Dynamics</strong>
     <ul>
         <li>Analyze the local Pakistan laptop market structure: M&P Share holds 30%, Other Official Channels hold 15%, and Grey Market imports hold 55%.</li>
         <li>Explain that Other Official channels include JOSS Computers, Unique Technologies, and HCom Distributors.</li>
@@ -120,8 +110,8 @@ const presenterNotes = [
         <li><strong>M&P Revenue Drivers:</strong> B2B enterprise contracts and government/education tenders make up 65% of revenue.</li>
     </ul>`,
     
-    // Slide 13 (Thank You)
-    `<strong>Slide 13: Concluding Remarks (Thank You)</strong>
+    // Slide 12 (Thank You)
+    `<strong>Slide 12: Concluding Remarks (Thank You)</strong>
     <ul>
         <li>Thank the audience for their time and attention.</li>
         <li>Reiterate Lenovo's core commitment: "Smarter Technology for All."</li>
@@ -200,8 +190,8 @@ function goToSlide(index) {
     // Deactivate current slide
     slides[currentSlide].classList.remove('active');
     
-    // If moving away from financial slide (index 5), reset charts
-    if (currentSlide === 7) {
+    // If moving away from financial slide (index 8), reset charts
+    if (currentSlide === 8) {
         resetFinancialCharts();
     }
     
@@ -250,8 +240,8 @@ function goToSlide(index) {
     // Update Slide Numbers
     currentSlideNum.textContent = currentSlide + 1;
     
-    // Trigger animations if active slide is Financial (index 5)
-    if (currentSlide === 7) {
+    // Trigger animations if active slide is Financial (index 8)
+    if (currentSlide === 8) {
         animateFinancialCharts();
     }
     

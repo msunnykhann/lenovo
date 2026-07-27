@@ -374,12 +374,21 @@ function toggleFullscreen() {
         document.documentElement.requestFullscreen().catch(err => {
             console.error(`Error attempting to enable fullscreen: ${err.message}`);
         });
-        btnFullscreen.classList.add('active');
     } else {
-        document.exitFullscreen();
-        btnFullscreen.classList.remove('active');
+        document.exitFullscreen().catch(err => {
+            console.error(`Error attempting to exit fullscreen: ${err.message}`);
+        });
     }
 }
+
+// Track fullscreen changes to update UI state correctly
+document.addEventListener('fullscreenchange', () => {
+    if (document.fullscreenElement) {
+        btnFullscreen.classList.add('active');
+    } else {
+        btnFullscreen.classList.remove('active');
+    }
+});
 
 // Financial Charts SVG Height Animation
 function animateFinancialCharts() {
@@ -510,6 +519,19 @@ window.addEventListener('keydown', (e) => {
         case 'End':
             goToSlide(totalSlides - 1);
             e.preventDefault();
+            break;
+
+        case 'F5':
+        case 'F11':
+            toggleFullscreen();
+            e.preventDefault();
+            break;
+
+        case 'Escape':
+            if (document.fullscreenElement) {
+                document.exitFullscreen().catch(err => console.error(err));
+                e.preventDefault();
+            }
             break;
     }
 });

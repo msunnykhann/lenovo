@@ -1298,6 +1298,11 @@ h1, h2, h3, h4 {
     z-index: 10;
 }
 
+/* Hide controls bar in fullscreen mode */
+:fullscreen .controls-bar {
+    display: none !important;
+}
+
 .slide-number-indicator {
     font-family: var(--font-heading);
     font-weight: 600;

@@ -864,6 +864,12 @@ h1, h2, h3, h4 {
     transform: translateY(-2px);
 }
 
+.sub-product-card.active {
+    background: rgba(226, 26, 34, 0.08);
+    border-color: var(--brand-red);
+    box-shadow: 0 4px 15px rgba(226, 26, 34, 0.15);
+}
+
 .sub-product-name {
     font-family: var(--font-heading);
     font-weight: 600;

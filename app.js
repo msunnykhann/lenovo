@@ -109,9 +109,19 @@ const presenterNotes = [
         <li><strong>Grey Market:</strong> Void local warranty, delayed parts support, tax evasion, and risk of refurbished goods.</li>
         <li><strong>M&P Revenue Drivers:</strong> B2B enterprise contracts and government/education tenders make up 65% of revenue.</li>
     </ul>`,
+
+    // Slide 12 (M&P Sales Performance)
+    `<strong>Slide 12: M&P Lenovo Sales Performance (PKR)</strong>
+    <ul>
+        <li>Walk through the 5-year sales trend of Lenovo products distributed by M&P Pakistan (FY22 to FY26).</li>
+        <li><strong>Total Revenue Peak:</strong> Combined sales reached a record peak of PKR 1.97 Billion in FY26, representing a strong 28.5% YoY growth.</li>
+        <li><strong>Computers vs. Smart Devices:</strong> Computers (laptops/PCs) remain the primary driver, growing 54% YoY to PKR 1.93 Billion in FY26.</li>
+        <li><strong>Smart Devices & Tablets (FY22-23 Zero Sales):</strong> Explain that zero sales in FY22 and FY23 were due to the State Bank of Pakistan's (SBP) strict restrictions on opening Letters of Credit (LCs) for mobile imports to manage FX reserves. Legal import/distribution officially resumed in <strong>2024</strong> after policy ease, peaking at PKR 424.2 Million in FY24.</li>
+        <li><strong>Overall Milestone:</strong> Revenue has more than doubled (2.26x growth) compared to the FY23 baseline of PKR 870.9 Million.</li>
+    </ul>`,
     
-    // Slide 12 (Thank You)
-    `<strong>Slide 12: Concluding Remarks (Thank You)</strong>
+    // Slide 13 (Thank You)
+    `<strong>Slide 13: Concluding Remarks (Thank You)</strong>
     <ul>
         <li>Thank the audience for their time and attention.</li>
         <li>Reiterate Lenovo's core commitment: "Smarter Technology for All."</li>
@@ -190,26 +200,37 @@ function goToSlide(index) {
     // Deactivate current slide
     slides[currentSlide].classList.remove('active');
     
-    // If moving away from financial slide (index 8), reset charts
-    if (currentSlide === 8) {
-        resetFinancialCharts();
+    // If moving away from financial slide (index 8) or M&P Sales slide (index 11), reset charts
+    if (currentSlide === 8 || currentSlide === 11) {
+        resetFinancialCharts(slides[currentSlide]);
     }
     
     const previousSlide = currentSlide;
     currentSlide = index;
     
-    // If navigating to Slide 4 (index 3 - History), set timeline state based on direction
-    if (currentSlide === 3) {
+    // If navigating to Slide 3 (index 2 - History Timeline), set timeline state based on direction
+    if (currentSlide === 2) {
         const timelineBtns = document.querySelectorAll('.timeline-btn');
         if (timelineBtns.length > 0) {
-            const targetBtn = previousSlide > 3 ? timelineBtns[timelineBtns.length - 1] : timelineBtns[0];
+            const targetBtn = previousSlide > 2 ? timelineBtns[timelineBtns.length - 1] : timelineBtns[0];
             if (targetBtn) {
                 targetBtn.click();
             }
         }
     }
     
-    // If navigating to Slide 4 (index 3 - Products & Services), set products tab based on direction
+    // If navigating to Slide 4 (index 3 - Global Presence Map), set active map pin based on direction
+    if (currentSlide === 3) {
+        const mapPinsList = document.querySelectorAll('.map-pin');
+        if (mapPinsList.length > 0) {
+            const targetPin = previousSlide > 3 ? mapPinsList[mapPinsList.length - 1] : mapPinsList[0];
+            if (targetPin) {
+                setActiveMapPin(targetPin);
+            }
+        }
+    }
+    
+    // If navigating to Slide 5 (index 4 - Products & Services), set products tab based on direction
     if (currentSlide === 4) {
         const productBtns = document.querySelectorAll('.product-menu-btn');
         if (productBtns.length > 0) {
@@ -240,9 +261,9 @@ function goToSlide(index) {
     // Update Slide Numbers
     currentSlideNum.textContent = currentSlide + 1;
     
-    // Trigger animations if active slide is Financial (index 8)
-    if (currentSlide === 8) {
-        animateFinancialCharts();
+    // Trigger animations if active slide is Financial (index 8) or M&P Sales (index 11)
+    if (currentSlide === 8 || currentSlide === 11) {
+        animateFinancialCharts(slides[currentSlide]);
     }
     
     // Update Presenter Notes
@@ -264,13 +285,49 @@ function nextSlide() {
         }
     }
     
-    // If on Products Portfolio slide and not on last product tab, advance product tab instead
+    // If on Global Presence map slide and not on last map pin, advance map pin instead
+    if (activeSlideEl && activeSlideEl.querySelector('.map-visualization')) {
+        const activePin = activeSlideEl.querySelector('.map-pin.active');
+        if (activePin) {
+            const nextPin = activePin.nextElementSibling;
+            if (nextPin && nextPin.classList.contains('map-pin')) {
+                setActiveMapPin(nextPin);
+                return; // Intercept: don't change slide yet
+            }
+        }
+    }
+    
+    // If on Products Portfolio slide, cycle through sub-products within the active category first, then next category
     if (activeSlideEl && activeSlideEl.querySelector('.products-menu')) {
-        const activeBtn = activeSlideEl.querySelector('.product-menu-btn.active');
-        if (activeBtn) {
-            const nextBtn = activeBtn.nextElementSibling;
-            if (nextBtn && nextBtn.classList.contains('product-menu-btn')) {
-                nextBtn.click();
+        const activeCategoryBtn = activeSlideEl.querySelector('.product-menu-btn.active');
+        if (activeCategoryBtn) {
+            const categoryId = activeCategoryBtn.getAttribute('data-category');
+            const activeDetailPanel = activeSlideEl.querySelector(`#prod-${categoryId}`);
+            if (activeDetailPanel) {
+                const activeCard = activeDetailPanel.querySelector('.sub-product-card.active');
+                if (activeCard) {
+                    const nextCard = activeCard.nextElementSibling;
+                    if (nextCard && nextCard.classList.contains('sub-product-card')) {
+                        nextCard.click();
+                        return; // Intercept: don't change category/slide yet
+                    }
+                }
+            }
+            
+            // If no next sub-product card in this category, advance to next category
+            const nextCategoryBtn = activeCategoryBtn.nextElementSibling;
+            if (nextCategoryBtn && nextCategoryBtn.classList.contains('product-menu-btn')) {
+                nextCategoryBtn.click();
+                
+                // Also auto-activate the first sub-product card of the newly selected category
+                const newCategoryId = nextCategoryBtn.getAttribute('data-category');
+                const newDetailPanel = activeSlideEl.querySelector(`#prod-${newCategoryId}`);
+                if (newDetailPanel) {
+                    const firstCard = newDetailPanel.querySelector('.sub-product-card');
+                    if (firstCard) {
+                        firstCard.click();
+                    }
+                }
                 return; // Intercept: don't change slide yet
             }
         }
@@ -296,13 +353,50 @@ function prevSlide() {
         }
     }
     
-    // If on Products Portfolio slide and not on first product tab, go back product tab instead
+    // If on Global Presence map slide and not on first map pin, go back map pin instead
+    if (activeSlideEl && activeSlideEl.querySelector('.map-visualization')) {
+        const activePin = activeSlideEl.querySelector('.map-pin.active');
+        if (activePin) {
+            const prevPin = activePin.previousElementSibling;
+            if (prevPin && prevPin.classList.contains('map-pin')) {
+                setActiveMapPin(prevPin);
+                return; // Intercept: don't change slide yet
+            }
+        }
+    }
+    
+    // If on Products Portfolio slide, cycle back through sub-products within the active category first, then prev category
     if (activeSlideEl && activeSlideEl.querySelector('.products-menu')) {
-        const activeBtn = activeSlideEl.querySelector('.product-menu-btn.active');
-        if (activeBtn) {
-            const prevBtn = activeBtn.previousElementSibling;
-            if (prevBtn && prevBtn.classList.contains('product-menu-btn')) {
-                prevBtn.click();
+        const activeCategoryBtn = activeSlideEl.querySelector('.product-menu-btn.active');
+        if (activeCategoryBtn) {
+            const categoryId = activeCategoryBtn.getAttribute('data-category');
+            const activeDetailPanel = activeSlideEl.querySelector(`#prod-${categoryId}`);
+            if (activeDetailPanel) {
+                const activeCard = activeDetailPanel.querySelector('.sub-product-card.active');
+                if (activeCard) {
+                    const prevCard = activeCard.previousElementSibling;
+                    if (prevCard && prevCard.classList.contains('sub-product-card')) {
+                        prevCard.click();
+                        return; // Intercept: don't change category/slide yet
+                    }
+                }
+            }
+            
+            // If no prev sub-product card in this category, move back to previous category
+            const prevCategoryBtn = activeCategoryBtn.previousElementSibling;
+            if (prevCategoryBtn && prevCategoryBtn.classList.contains('product-menu-btn')) {
+                prevCategoryBtn.click();
+                
+                // Also auto-activate the LAST sub-product card of the newly selected category (since navigating backwards)
+                const newCategoryId = prevCategoryBtn.getAttribute('data-category');
+                const newDetailPanel = activeSlideEl.querySelector(`#prod-${newCategoryId}`);
+                if (newDetailPanel) {
+                    const cards = newDetailPanel.querySelectorAll('.sub-product-card');
+                    if (cards.length > 0) {
+                        const lastCard = cards[cards.length - 1];
+                        lastCard.click();
+                    }
+                }
                 return; // Intercept: don't change slide yet
             }
         }
@@ -391,10 +485,11 @@ document.addEventListener('fullscreenchange', () => {
 });
 
 // Financial Charts SVG Height Animation
-function animateFinancialCharts() {
-    const bars = document.querySelectorAll('.chart-bar-inner');
+function animateFinancialCharts(slideEl) {
+    if (!slideEl) return;
+    const bars = slideEl.querySelectorAll('.chart-bar-inner');
     bars.forEach(bar => {
-        const percentage = bar.getAttribute('data-percentage');
+        const percentage = parseFloat(bar.getAttribute('data-percentage'));
         // Scale percentage to fit chart container max height (approx 85% of outer bar)
         let chartHeight = percentage;
         if (percentage > 80) chartHeight = 85; // cap visual representation nicely
@@ -406,8 +501,9 @@ function animateFinancialCharts() {
     });
 }
 
-function resetFinancialCharts() {
-    const bars = document.querySelectorAll('.chart-bar-inner');
+function resetFinancialCharts(slideEl) {
+    if (!slideEl) return;
+    const bars = slideEl.querySelectorAll('.chart-bar-inner');
     bars.forEach(bar => {
         bar.style.height = '0%';
     });
@@ -474,32 +570,59 @@ function updateHubPanel(hubKey) {
     hubStaff.textContent = hub.staff;
 }
 
-mapPins.forEach(pin => {
-    pin.addEventListener('mouseenter', () => {
-        const hubKey = pin.getAttribute('data-hub');
-        updateHubPanel(hubKey);
-        
-        // Toggle visual active state on hover
-        mapPins.forEach(p => {
-            const dot = p.querySelector('.pin-dot');
+function setActiveMapPin(pinEl) {
+    if (!pinEl) return;
+    const hubKey = pinEl.getAttribute('data-hub');
+    updateHubPanel(hubKey);
+    
+    // Toggle active state
+    mapPins.forEach(p => {
+        p.classList.remove('active');
+        const dot = p.querySelector('.pin-dot');
+        if (dot) {
             dot.style.backgroundColor = '';
             dot.style.borderColor = '';
-        });
-        const activeDot = pin.querySelector('.pin-dot');
+        }
+    });
+    
+    pinEl.classList.add('active');
+    const activeDot = pinEl.querySelector('.pin-dot');
+    if (activeDot) {
         activeDot.style.backgroundColor = '#ffffff';
         activeDot.style.borderColor = 'var(--brand-red)';
+    }
+}
+
+mapPins.forEach(pin => {
+    pin.addEventListener('mouseenter', () => {
+        setActiveMapPin(pin);
+    });
+    pin.addEventListener('click', () => {
+        setActiveMapPin(pin);
     });
 });
 
 // Keyboard Listeners (Support clickers & standard key navigation)
 window.addEventListener('keydown', (e) => {
+    // Console log to troubleshoot presentation clickers and key mapping
+    console.log(`Keystroke detected - Key: "${e.key}" | Code: "${e.code}" | Shift: ${e.shiftKey} | Ctrl: ${e.ctrlKey} | Alt: ${e.altKey} | Meta: ${e.metaKey}`);
+
     switch (e.key) {
         case 'ArrowRight':
         case 'ArrowDown':
         case ' ': // Spacebar
         case 'PageDown':
-        case 'Enter':
             nextSlide();
+            e.preventDefault();
+            break;
+
+        case 'Enter':
+            // If Ctrl+Enter or Cmd+Enter is sent by clickers to play/start slideshow, toggle fullscreen
+            if (e.ctrlKey || e.metaKey) {
+                toggleFullscreen();
+            } else {
+                nextSlide();
+            }
             e.preventDefault();
             break;
             
@@ -522,9 +645,14 @@ window.addEventListener('keydown', (e) => {
             break;
 
         case 'F5':
-        case 'F11':
+        case 'f':
+        case 'F':
             toggleFullscreen();
             e.preventDefault();
+            break;
+
+        case 'F11':
+            // Do not call preventDefault. Let the browser handle native window fullscreen natively.
             break;
 
         case 'Escape':
@@ -569,14 +697,18 @@ function handleSwipe() {
     }
 }
 
-// Dynamic sub-product card hover image switcher
+// Dynamic sub-product card click image switcher
 document.querySelectorAll('.sub-product-card').forEach(card => {
-    card.addEventListener('mouseenter', function() {
+    card.addEventListener('click', function() {
         const targetImgPath = this.getAttribute('data-image');
         if (!targetImgPath) return;
 
         const parentSplit = this.closest('.product-grid-split');
         if (!parentSplit) return;
+
+        // Update active classes for cards in this group
+        parentSplit.querySelectorAll('.sub-product-card').forEach(c => c.classList.remove('active'));
+        this.classList.add('active');
 
         const imgEl = parentSplit.querySelector('.product-showcase-img');
         if (!imgEl) return;

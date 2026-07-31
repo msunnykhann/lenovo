@@ -63,16 +63,9 @@ const presenterNotes = [
         <li><strong>Segments:</strong> Lenovo's Legion dominates local high-end gaming demand due to cooling; ThinkPad goes head-to-head with HP EliteBook in corporate deals.</li>
     </ul>`,
     
-    // Slide 7 (AI PC)
-    `<strong>Slide 7: AI PC & Hybrid AI Strategy</strong>
-    <ul>
-        <li>Explain the "AI for All" hybrid AI vision: combining public cloud speed with private on-device security.</li>
-        <li><strong>Hardware:</strong> Next-generation devices shipping with dedicated Neural Processing Units (NPUs).</li>
-        <li><strong>Data Centers:</strong> Lenovo Neptune direct liquid-cooling technology reduces server energy consumption by up to 40%.</li>
-    </ul>`,
 
-    // Slide 8 (FIFA)
-    `<strong>Slide 8: FIFA World Cup 2026 Partnership (Post-Event Success)</strong>
+    // Slide 7 (FIFA)
+    `<strong>Slide 7: FIFA World Cup 2026 Partnership (Post-Event Success)</strong>
     <ul>
         <li>Explain that since the World Cup has successfully concluded, we can talk about Lenovo's flawless execution.</li>
         <li>Lenovo acted as the <strong>Official FIFA Technology Partner</strong> across the USA, Canada, and Mexico.</li>
@@ -80,8 +73,8 @@ const presenterNotes = [
         <li>Emphasize that Lenovo ThinkSystem edge servers successfully powered computing tasks inside all stadiums across all 104 matches without any downtime.</li>
     </ul>`,
     
-    // Slide 9 (Financials)
-    `<strong>Slide 9: Financial Performance (5-Year Trend & Vision 2028)</strong>
+    // Slide 8 (Financials)
+    `<strong>Slide 8: Financial Performance (5-Year Trend & Vision 2028)</strong>
     <ul>
         <li><strong>Explain the 5-Year Revenue Curve:</strong> Walk the audience through the trend:</li>
         <li><strong>FY22 ($71.6B):</strong> Post-pandemic peak demand.</li>
@@ -91,8 +84,8 @@ const presenterNotes = [
         <li><strong>Vision 2028:</strong> Highlight the forward-looking roadmap to reach <strong>$100 Billion</strong> in annual revenue by 2028, driven by hybrid AI infrastructure, Neptune cooling systems, and solutions expansion.</li>
     </ul>`,
 
-    // Slide 10 (M&P Distribution)
-    `<strong>Slide 10: Lenovo & M&P Distribution (Pakistan)</strong>
+    // Slide 9 (M&P Distribution)
+    `<strong>Slide 9: Lenovo & M&P Distribution (Pakistan)</strong>
     <ul>
         <li>Introduce Muller & Phipps (M&P) as the official authorized distributor for Lenovo in Pakistan.</li>
         <li>Logistics and reseller dealer networks are managed via M&P's tech arm, Tech Sirat (acquired in 2016).</li>
@@ -100,8 +93,8 @@ const presenterNotes = [
         <li>Explain the official warranty benefit: 1-2 years direct local manufacturer warranty on authorized imports.</li>
     </ul>`,
 
-    // Slide 11 (Grey Market)
-    `<strong>Slide 11: M&P vs. Grey Market Dynamics</strong>
+    // Slide 10 (Grey Market)
+    `<strong>Slide 10: M&P vs. Grey Market Dynamics</strong>
     <ul>
         <li>Analyze the local Pakistan laptop market structure: M&P Share holds 30%, Other Official Channels hold 15%, and Grey Market imports hold 55%.</li>
         <li>Explain that Other Official channels include JOSS Computers, Unique Technologies, and HCom Distributors.</li>
@@ -110,8 +103,8 @@ const presenterNotes = [
         <li><strong>M&P Revenue Drivers:</strong> B2B enterprise contracts and government/education tenders make up 65% of revenue.</li>
     </ul>`,
 
-    // Slide 12 (M&P Sales Performance)
-    `<strong>Slide 12: M&P Lenovo Sales Performance (PKR)</strong>
+    // Slide 11 (M&P Sales Performance)
+    `<strong>Slide 11: M&P Lenovo Sales Performance (PKR)</strong>
     <ul>
         <li>Walk through the 5-year sales trend of Lenovo products distributed by M&P Pakistan (FY22 to FY26).</li>
         <li><strong>Total Revenue Peak:</strong> Combined sales reached a record peak of PKR 1.97 Billion in FY26, representing a strong 28.5% YoY growth.</li>
@@ -120,8 +113,8 @@ const presenterNotes = [
         <li><strong>Overall Milestone:</strong> Revenue has more than doubled (2.26x growth) compared to the FY23 baseline of PKR 870.9 Million.</li>
     </ul>`,
     
-    // Slide 13 (Thank You)
-    `<strong>Slide 13: Concluding Remarks (Thank You)</strong>
+    // Slide 12 (Thank You)
+    `<strong>Slide 12: Concluding Remarks (Thank You)</strong>
     <ul>
         <li>Thank the audience for their time and attention.</li>
         <li>Reiterate Lenovo's core commitment: "Smarter Technology for All."</li>
@@ -200,8 +193,8 @@ function goToSlide(index) {
     // Deactivate current slide
     slides[currentSlide].classList.remove('active');
     
-    // If moving away from financial slide (index 8) or M&P Sales slide (index 11), reset charts
-    if (currentSlide === 8 || currentSlide === 11) {
+    // If moving away from financial slide (index 7) or M&P Sales slide (index 10), reset charts
+    if (currentSlide === 7 || currentSlide === 10) {
         resetFinancialCharts(slides[currentSlide]);
     }
     
@@ -261,8 +254,8 @@ function goToSlide(index) {
     // Update Slide Numbers
     currentSlideNum.textContent = currentSlide + 1;
     
-    // Trigger animations if active slide is Financial (index 8) or M&P Sales (index 11)
-    if (currentSlide === 8 || currentSlide === 11) {
+    // Trigger animations if active slide is Financial (index 7) or M&P Sales (index 10)
+    if (currentSlide === 7 || currentSlide === 10) {
         animateFinancialCharts(slides[currentSlide]);
     }
     
@@ -285,17 +278,6 @@ function nextSlide() {
         }
     }
     
-    // If on Global Presence map slide and not on last map pin, advance map pin instead
-    if (activeSlideEl && activeSlideEl.querySelector('.map-visualization')) {
-        const activePin = activeSlideEl.querySelector('.map-pin.active');
-        if (activePin) {
-            const nextPin = activePin.nextElementSibling;
-            if (nextPin && nextPin.classList.contains('map-pin')) {
-                setActiveMapPin(nextPin);
-                return; // Intercept: don't change slide yet
-            }
-        }
-    }
     
     // If on Products Portfolio slide, cycle through sub-products within the active category first, then next category
     if (activeSlideEl && activeSlideEl.querySelector('.products-menu')) {
@@ -353,17 +335,6 @@ function prevSlide() {
         }
     }
     
-    // If on Global Presence map slide and not on first map pin, go back map pin instead
-    if (activeSlideEl && activeSlideEl.querySelector('.map-visualization')) {
-        const activePin = activeSlideEl.querySelector('.map-pin.active');
-        if (activePin) {
-            const prevPin = activePin.previousElementSibling;
-            if (prevPin && prevPin.classList.contains('map-pin')) {
-                setActiveMapPin(prevPin);
-                return; // Intercept: don't change slide yet
-            }
-        }
-    }
     
     // If on Products Portfolio slide, cycle back through sub-products within the active category first, then prev category
     if (activeSlideEl && activeSlideEl.querySelector('.products-menu')) {

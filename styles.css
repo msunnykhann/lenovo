@@ -976,13 +976,13 @@ h4 {
     border: 1px solid var(--border-color);
     border-radius: 16px;
     padding: 24px;
-    height: 380px;
+    height: 440px;
     display: flex;
     flex-direction: column;
 }
 
 .chart-title {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     color: #fff;
     margin-bottom: 24px;
     font-weight: 600;
@@ -1007,7 +1007,7 @@ h4 {
 
 .chart-bar-outer {
     width: 44px;
-    height: 200px;
+    height: 240px;
     background: rgba(255, 255, 255, 0.02);
     border-radius: 8px 8px 0 0;
     position: relative;
@@ -1038,12 +1038,12 @@ h4 {
 
 .chart-bar-value {
     position: absolute;
-    top: -26px;
+    top: -30px;
     left: 50%;
     transform: translateX(-50%) translateY(5px);
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 0.88rem;
+    font-size: 1.05rem;
     color: #fff;
     opacity: 0;
     white-space: nowrap;
@@ -1057,7 +1057,7 @@ h4 {
 
 .chart-bar-label {
     margin-top: 10px;
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     color: var(--text-secondary);
     font-weight: 500;
 }
@@ -1349,7 +1349,9 @@ h4 {
 }
 
 /* Hide controls bar in fullscreen mode */
-:fullscreen .controls-bar {
+:fullscreen .controls-bar,
+:-webkit-full-screen .controls-bar,
+.is-fullscreen .controls-bar {
     display: none !important;
 }
 

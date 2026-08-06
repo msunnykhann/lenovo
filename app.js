@@ -6,7 +6,7 @@ const presenterNotes = [
         <li>State the topic: Lenovo Corporation's journey of innovation, strategy, and transformation.</li>
         <li>Today we will cover Lenovo's global footprint, milestones, products, 2026 financials, and the authorized channel distribution in Pakistan.</li>
     </ul>`,
-    
+
     // Slide 2 (Intro)
     `<strong>Slide 2: Introduction & Brand Story</strong>
     <ul>
@@ -17,7 +17,7 @@ const presenterNotes = [
         <li>Point out the landmark milestone: Acquiring IBM's PC division (2005) which established global reach.</li>
         <li>Highlight scale: 180+ markets, 72K employees, and 30+ manufacturing hubs.</li>
     </ul>`,
-    
+
     // Slide 3 (History Timeline)
     `<strong>Slide 3: The Lenovo Odyssey (Timeline)</strong>
     <ul>
@@ -31,7 +31,7 @@ const presenterNotes = [
         <li><strong>Ch 7 (2026):</strong> Emphasize the pivot into the Hybrid AI era with historic $83.1B in revenues.</li>
         <li><strong>Ch 8 (2028+):</strong> Future vision. Highlights Intelligent Transformation, Net-Zero emissions target by 2050 (validated by SBTi), and the Vision 2028 $100 Billion revenue target. Mention the Lenovo Foundation's STEM programs.</li>
     </ul>`,
-    
+
     // Slide 4 (Global Map)
     `<strong>Slide 4: Global Footprint & Hubs</strong>
     <ul>
@@ -43,7 +43,7 @@ const presenterNotes = [
         <li><strong>Singapore:</strong> Core financial hub and sales gateway for Southeast Asia.</li>
         <li><strong>Yamato (Japan):</strong> The famous engineering laboratory where the ThinkPad is designed and stress-tested.</li>
     </ul>`,
-    
+
     // Slide 5 (Products)
     `<strong>Slide 5: Products & Services Portfolio</strong>
     <ul>
@@ -53,7 +53,7 @@ const presenterNotes = [
         <li><strong>Infrastructure (ISG):</strong> ThinkSystem servers and liquid-cooled AI clusters for deep learning.</li>
         <li><strong>Services (SSG):</strong> TruScale (flexible pay-as-you-go IT infrastructure) and Premium Care.</li>
     </ul>`,
-    
+
     // Slide 6 (Competitor)
     `<strong>Slide 6: Competitor Analysis</strong>
     <ul>
@@ -62,7 +62,7 @@ const presenterNotes = [
         <li><strong>Pakistan:</strong> HP (ProBook/EliteBook) and Dell (Inspiron/Latitude) are the primary competitors.</li>
         <li><strong>Segments:</strong> Lenovo's Legion dominates local high-end gaming demand due to cooling; ThinkPad goes head-to-head with HP EliteBook in corporate deals.</li>
     </ul>`,
-    
+
 
     // Slide 7 (FIFA)
     `<strong>Slide 7: FIFA World Cup 2026 Partnership (Post-Event Success)</strong>
@@ -72,7 +72,7 @@ const presenterNotes = [
         <li>Detail the deployment scale: Powered real-time player telemetry, ball tracking analytics, and data graphics.</li>
         <li>Emphasize that Lenovo ThinkSystem edge servers successfully powered computing tasks inside all stadiums across all 104 matches without any downtime.</li>
     </ul>`,
-    
+
     // Slide 8 (Financials)
     `<strong>Slide 8: Financial Performance (5-Year Trend & Vision 2028)</strong>
     <ul>
@@ -112,7 +112,7 @@ const presenterNotes = [
         <li><strong>Smart Devices & Tablets (FY22-23 Zero Sales):</strong> Explain that zero sales in FY22 and FY23 were due to the State Bank of Pakistan's (SBP) strict restrictions on opening Letters of Credit (LCs) for mobile imports to manage FX reserves. Legal import/distribution officially resumed in <strong>2024</strong> after policy ease, peaking at PKR 424.2 Million in FY24.</li>
         <li><strong>Overall Milestone:</strong> Revenue has more than doubled (2.26x growth) compared to the FY23 baseline of PKR 870.9 Million.</li>
     </ul>`,
-    
+
     // Slide 12 (Thank You)
     `<strong>Slide 12: Concluding Remarks (Thank You)</strong>
     <ul>
@@ -189,18 +189,18 @@ totalSlidesNum.textContent = totalSlides;
 // Navigation Function
 function goToSlide(index) {
     if (index < 0 || index >= totalSlides) return;
-    
+
     // Deactivate current slide
     slides[currentSlide].classList.remove('active');
-    
+
     // If moving away from financial slide (index 7) or M&P Sales slide (index 10), reset charts
     if (currentSlide === 7 || currentSlide === 10) {
         resetFinancialCharts(slides[currentSlide]);
     }
-    
+
     const previousSlide = currentSlide;
     currentSlide = index;
-    
+
     // If navigating to Slide 3 (index 2 - History Timeline), set timeline state based on direction
     if (currentSlide === 2) {
         const timelineBtns = document.querySelectorAll('.timeline-btn');
@@ -211,7 +211,7 @@ function goToSlide(index) {
             }
         }
     }
-    
+
     // If navigating to Slide 4 (index 3 - Global Presence Map), set active map pin based on direction
     if (currentSlide === 3) {
         const mapPinsList = document.querySelectorAll('.map-pin');
@@ -222,7 +222,7 @@ function goToSlide(index) {
             }
         }
     }
-    
+
     // If navigating to Slide 5 (index 4 - Products & Services), set products tab based on direction
     if (currentSlide === 4) {
         const productBtns = document.querySelectorAll('.product-menu-btn');
@@ -233,10 +233,10 @@ function goToSlide(index) {
             }
         }
     }
-    
+
     // Activate new slide
     slides[currentSlide].classList.add('active');
-    
+
     // Toggle Top Right Brand Logo visibility (hide on cover title slide index 0)
     const topLogo = document.getElementById('top-brand-logo');
     if (topLogo) {
@@ -246,26 +246,26 @@ function goToSlide(index) {
             topLogo.style.opacity = '1';
         }
     }
-    
+
     // Update Progress Bar
     const progress = ((currentSlide + 1) / totalSlides) * 100;
     progressBar.style.width = `${progress}%`;
-    
+
     // Update Slide Numbers
     currentSlideNum.textContent = currentSlide + 1;
-    
+
     // Trigger animations if active slide is Financial (index 7) or M&P Sales (index 10)
     if (currentSlide === 7 || currentSlide === 10) {
         animateFinancialCharts(slides[currentSlide]);
     }
-    
+
     // Update Presenter Notes
     updatePresenterNotes();
 }
 
 function nextSlide() {
     const activeSlideEl = slides[currentSlide];
-    
+
     // If on History Timeline slide and not on last chapter, advance timeline chapter instead
     if (activeSlideEl && activeSlideEl.querySelector('.timeline-nav-horizontal')) {
         const activeBtn = activeSlideEl.querySelector('.timeline-btn.active');
@@ -277,8 +277,8 @@ function nextSlide() {
             }
         }
     }
-    
-    
+
+
     // If on Products Portfolio slide, cycle through sub-products within the active category first, then next category
     if (activeSlideEl && activeSlideEl.querySelector('.products-menu')) {
         const activeCategoryBtn = activeSlideEl.querySelector('.product-menu-btn.active');
@@ -295,12 +295,12 @@ function nextSlide() {
                     }
                 }
             }
-            
+
             // If no next sub-product card in this category, advance to next category
             const nextCategoryBtn = activeCategoryBtn.nextElementSibling;
             if (nextCategoryBtn && nextCategoryBtn.classList.contains('product-menu-btn')) {
                 nextCategoryBtn.click();
-                
+
                 // Also auto-activate the first sub-product card of the newly selected category
                 const newCategoryId = nextCategoryBtn.getAttribute('data-category');
                 const newDetailPanel = activeSlideEl.querySelector(`#prod-${newCategoryId}`);
@@ -314,7 +314,7 @@ function nextSlide() {
             }
         }
     }
-    
+
     if (currentSlide < totalSlides - 1) {
         goToSlide(currentSlide + 1);
     }
@@ -322,7 +322,7 @@ function nextSlide() {
 
 function prevSlide() {
     const activeSlideEl = slides[currentSlide];
-    
+
     // If on History Timeline slide and not on first chapter, go back timeline chapter instead
     if (activeSlideEl && activeSlideEl.querySelector('.timeline-nav-horizontal')) {
         const activeBtn = activeSlideEl.querySelector('.timeline-btn.active');
@@ -334,8 +334,8 @@ function prevSlide() {
             }
         }
     }
-    
-    
+
+
     // If on Products Portfolio slide, cycle back through sub-products within the active category first, then prev category
     if (activeSlideEl && activeSlideEl.querySelector('.products-menu')) {
         const activeCategoryBtn = activeSlideEl.querySelector('.product-menu-btn.active');
@@ -352,12 +352,12 @@ function prevSlide() {
                     }
                 }
             }
-            
+
             // If no prev sub-product card in this category, move back to previous category
             const prevCategoryBtn = activeCategoryBtn.previousElementSibling;
             if (prevCategoryBtn && prevCategoryBtn.classList.contains('product-menu-btn')) {
                 prevCategoryBtn.click();
-                
+
                 // Also auto-activate the LAST sub-product card of the newly selected category (since navigating backwards)
                 const newCategoryId = prevCategoryBtn.getAttribute('data-category');
                 const newDetailPanel = activeSlideEl.querySelector(`#prod-${newCategoryId}`);
@@ -372,7 +372,7 @@ function prevSlide() {
             }
         }
     }
-    
+
     if (currentSlide > 0) {
         goToSlide(currentSlide - 1);
     }
@@ -381,7 +381,7 @@ function prevSlide() {
 // Presenter Notes Update
 function updatePresenterNotes() {
     notesContent.innerHTML = presenterNotes[currentSlide] || "No notes available for this slide.";
-    
+
     // Update Next Slide Preview
     if (currentSlide < totalSlides - 1) {
         const nextTitleEl = slides[currentSlide + 1].querySelector('.slide-title');
@@ -400,7 +400,7 @@ function startTimer() {
     if (timerInterval) clearInterval(timerInterval);
     secondsElapsed = 0;
     notesTimer.textContent = "00:00";
-    
+
     timerInterval = setInterval(() => {
         secondsElapsed++;
         const minutes = Math.floor(secondsElapsed / 60).toString().padStart(2, '0');
@@ -420,13 +420,13 @@ function stopTimer() {
 function togglePresenterNotes() {
     const isPresenterNotesActive = document.body.classList.toggle('presenter-mode');
     btnNotes.classList.toggle('active', isPresenterNotesActive);
-    
+
     if (isPresenterNotesActive) {
         startTimer();
     } else {
         stopTimer();
     }
-    
+
     // Resize delay to trigger CSS grid readjustments smoothly
     setTimeout(() => {
         window.dispatchEvent(new Event('resize'));
@@ -450,8 +450,10 @@ function toggleFullscreen() {
 document.addEventListener('fullscreenchange', () => {
     if (document.fullscreenElement) {
         btnFullscreen.classList.add('active');
+        document.body.classList.add('is-fullscreen');
     } else {
         btnFullscreen.classList.remove('active');
+        document.body.classList.remove('is-fullscreen');
     }
 });
 
@@ -464,7 +466,7 @@ function animateFinancialCharts(slideEl) {
         // Scale percentage to fit chart container max height (approx 85% of outer bar)
         let chartHeight = percentage;
         if (percentage > 80) chartHeight = 85; // cap visual representation nicely
-        
+
         // Wait slightly for slide transition to finish before animating
         setTimeout(() => {
             bar.style.height = `${chartHeight}%`;
@@ -489,7 +491,7 @@ timelineBtns.forEach(btn => {
         // Toggle Active Button
         timelineBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        
+
         // Toggle Active Detail
         const targetYear = btn.getAttribute('data-year');
         timelineDetails.forEach(detail => {
@@ -510,7 +512,7 @@ productBtns.forEach(btn => {
         // Toggle Active Product Tab Button
         productBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        
+
         // Toggle Active Product Detail Card
         const category = btn.getAttribute('data-category');
         productDetails.forEach(detail => {
@@ -533,7 +535,7 @@ const hubStaff = document.getElementById('hub-staff');
 function updateHubPanel(hubKey) {
     const hub = hubData[hubKey];
     if (!hub) return;
-    
+
     hubTitle.textContent = hub.title;
     hubRegion.textContent = hub.region;
     hubFocus.textContent = hub.focus;
@@ -545,7 +547,7 @@ function setActiveMapPin(pinEl) {
     if (!pinEl) return;
     const hubKey = pinEl.getAttribute('data-hub');
     updateHubPanel(hubKey);
-    
+
     // Toggle active state
     mapPins.forEach(p => {
         p.classList.remove('active');
@@ -555,7 +557,7 @@ function setActiveMapPin(pinEl) {
             dot.style.borderColor = '';
         }
     });
-    
+
     pinEl.classList.add('active');
     const activeDot = pinEl.querySelector('.pin-dot');
     if (activeDot) {
@@ -596,7 +598,7 @@ window.addEventListener('keydown', (e) => {
             }
             e.preventDefault();
             break;
-            
+
         case 'ArrowLeft':
         case 'ArrowUp':
         case 'Backspace':
@@ -604,29 +606,34 @@ window.addEventListener('keydown', (e) => {
             prevSlide();
             e.preventDefault();
             break;
-            
+
         case 'Home':
             goToSlide(0);
             e.preventDefault();
             break;
-            
+
         case 'End':
             goToSlide(totalSlides - 1);
             e.preventDefault();
             break;
 
         case 'F5':
-        case 'f':
-        case 'F':
-            toggleFullscreen();
-            e.preventDefault();
+            if (e.ctrlKey || e.shiftKey || e.metaKey || e.altKey) {
+                break;
+            }
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(err => {
+                    console.error(`Error attempting to enable fullscreen: ${err.message}`);
+                });
+                e.preventDefault();
+            }
             break;
 
         case 'F11':
             // Do not call preventDefault. Let the browser handle native window fullscreen natively.
             break;
 
-        case 'Escape':
+        case '.':
             if (document.fullscreenElement) {
                 document.exitFullscreen().catch(err => console.error(err));
                 e.preventDefault();
@@ -670,7 +677,7 @@ function handleSwipe() {
 
 // Dynamic sub-product card click image switcher
 document.querySelectorAll('.sub-product-card').forEach(card => {
-    card.addEventListener('click', function() {
+    card.addEventListener('click', function () {
         const targetImgPath = this.getAttribute('data-image');
         if (!targetImgPath) return;
 
@@ -689,7 +696,7 @@ document.querySelectorAll('.sub-product-card').forEach(card => {
         // Apply smooth transition opacity toggle
         imgEl.style.opacity = '0.2';
         imgEl.style.transform = 'scale(0.97)';
-        
+
         setTimeout(() => {
             imgEl.src = targetImgPath;
             imgEl.style.opacity = '1';
